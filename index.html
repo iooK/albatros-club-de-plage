@@ -676,7 +676,7 @@
 
 				<article>
                     <ul class="row thumbnails list-unstyled">
-                        <li class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <li class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                             <div class="thumbnail">
                                 <img src="img/logo/la-belle-iloise.png" alt="" />
                                 <div class="caption txt-center">
@@ -687,8 +687,17 @@
                                     
                                 </div>
                             </div>
+                            <div class="thumbnail">
+                                <img src="img/logo/la-cour-d-orgeres.png" alt="" />
+                                <div class="caption txt-center">
+                                    <p>
+                                        La Cour D'Orgères<br />
+                                        <a href="http://www.lacourdorgeres.com/" title="La Cour D'Orgères" class="btn btn-default" role="button" target="_blank">Voir le site</a>
+                                    </p>
+                                </div>
+                            </div>
                         </li>
-                        <li class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <li class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                             <div class="thumbnail">
                                 <img src="img/logo/pasquier.png" alt="" />
                                 <div class="caption txt-center">
@@ -699,7 +708,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <li class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                             <div class="thumbnail">
                                 <img src="img/logo/maison-lucas.png" alt="" />
                                 <div class="caption txt-center">
@@ -710,13 +719,14 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+
+                        <li class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
                             <div class="thumbnail">
-                                <img src="img/logo/la-cour-d-orgeres.png" alt="" />
+                                <img src="img/logo/famille-plus.png" alt="" />
                                 <div class="caption txt-center">
                                     <p>
-                                        La Cour D'Orgères<br />
-                                        <a href="http://www.lacourdorgeres.com/" title="La Cour D'Orgères" class="btn btn-default" role="button" target="_blank">Voir le site</a>
+                                        Famille Plus<br />
+                                        <a href="http://www.familleplus.fr/" title="Famille Plus" class="btn btn-default" role="button" target="_blank">Voir le site</a>
                                     </p>
                                 </div>
                             </div>
@@ -749,7 +759,7 @@
                 
 			// fonction de détection des appareils mobiles
 			isTouchDevice = function() {
-			  return !!('ontouchstart' in window) // works on most browsers 
+			  return !!('ontouchstart' in document.documentElement) // works on most browsers
 				  || !!('onmsgesturechange' in window); // works on ie10
 			};
             isGeolocdevice = function() {
@@ -845,7 +855,7 @@
 					$.stellar({
 						horizontalScrolling: false,
 						verticalScrolling: true,
-						responsive: false,
+						responsive: false
 					});
 			
 					// scrolling tout en souplesse
@@ -871,7 +881,7 @@
 					$('#tarifClubPlage1').toggleClass('col-sm-6');
 					$('#tarifClubPlage1 a').text(($(this).text() == 'Afficher les deux tableaux') ? 'Afficher les tarifs préférentiels' : 'Afficher les deux tableaux');
 				});
-				// affichage du tableau de prix 1
+				// affichage du tableau de prix 2
 				$('#tarifClubPlage2 a').click(function(e) {
 					e.preventDefault();
 					//var widthDiv = 100*parseFloat($('#tarifClubPlage2').css('width')) / parseFloat($('#tarifClubPlage2').parent().css('width'));
