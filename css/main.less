@@ -1,131 +1,179 @@
-body {margin-bottom: 40px !important;}
-.huge-size {font-size: 2.5em;}
-.big-size {font-size: 1.2em;}
-.small-size {font-size: 0.8em;}
-.txt-center {text-align: center;}
-.txt-right {text-align: right;}
-.no-underline {text-decoration: none !important;}
-.underline {text-decoration: underline !important;}
-.hideRect {position:absolute; clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px);}
-.fauxBold {font-weight: bold;}
-.hideMe {display: none;}
+@import "./bootstrap-3.3.4/less/bootstrap.less";
+@import "./font-awesome-4.3.0/less/font-awesome.less";
+#elements { @import "./elements/elements.less"; }
+@import "./less/variables.less";
+
+.page-header {
+    text-align: center;
+    padding-bottom: 0;
+    h1 {
+        color: #0088CC;
+        padding-top: 60px;
+        margin-top: -60px;
+    }
+}
+
+.fa {
+    &&-chevron-right {
+        font-size: 10px;
+    }
+}
+
+body {
+    margin-bottom: 40px !important;
+}
+
+.huge-size {
+    font-size: 2.5em;
+}
+
+.big-size {
+    font-size: 1.2em;
+}
+
+.small-size {
+    font-size: 0.8em;
+}
+
+.text-nounderline,
+.no-underline {
+    text-decoration: none !important;
+}
+
+.underline {
+    text-decoration: underline !important;
+}
+
+.fauxBold {
+    font-weight: bold;
+}
+
+.hideMe {
+    .hidden();
+}
+
+// override h*
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold !important;
+    .text-center();
+}
+
 
 // overwrite navigation
 .nav {
-    >li {
-        >a {
+    > li {
+        > a {
             padding-top: 10px;
             padding-bottom: 10px;
             margin-top: 5px;
             margin-bottom: 5px;
-            color: #0088CC !important;        
-            border-radius: 5px 5px 5px 5px !important;
+            color: #0088CC !important;
+            #elements > #border.rounded(5px);
         }
-        >a:hover, >a:focus {
+        > a:hover, > a:focus {
             background-color: #EEEEEE !important;
         }
     }
-    >li.active {
-        >a {
+    > li.active {
+        > a {
             background-color: #0088CC !important;
-            color: #FFFFFF !important;            
+            color: #FFFFFF !important;
         }
     }
 }
-@media (max-width: 991px) {
-    .navbar-header {
-        float: none;
-    }
-    .navbar-toggle {
-        display: block;
-    }
-    .navbar-collapse {
-        border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-        &.collapse {
-            display: none!important;
-            &.in {  // since 3.1.0
-                display: block !important;
-            }
-        }
-    }
-    .navbar-nav {
-        float: none!important;
-        margin: 7.5px -15px;
-        >li {
-            float: none;    
-            >a {
-                padding-top: 10px;
-                padding-bottom: 10px;
-            }
-        }
-    }
-   
-    
-    
-    .collapsing {   // since 3.1.0
-        overflow: hidden !important;
-    }
-}
-// override h*
-h1, h2, h3, h4, h5, h6 {
-    font-weight: bold !important;
-}
+
 
 // plugin stellar
 .backgroundSizeCover {
-    -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
+
 .textShadow1 {
-    text-shadow: 0 2px 0 black, 1px 0 20px black, 0 1px 20px black;
+    #elements > #shadow.text(~"0 2px 0 black, 1px 0 20px black, 0 1px 20px black");
 }
+
 .textShadow2 {
-    text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
+    #elements > #shadow.text(~"0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black");
 }
+
 .img-stellar {
-    .backgroundSizeCover;
+    .backgroundSizeCover();
     background-attachment: scroll;
     background-position: 50% 0;
     background-repeat: no-repeat;
     height: 550px;
     position: relative;
 }
+
 .img-stellar span {
-    display: block; font-size: 38px; line-height: 38px;
+    display: block;
+    font-size: 38px;
+    line-height: 38px;
 }
+
 #img-stellar-club-plage {
     background-image: url("../img/enfant-plage-ocean2.jpg");
 }
+
 #img-stellar-ecole-natation {
     background-image: url("../img/ecole_natation.jpg");
 }
+
 #img-stellar-remise-forme {
-    background-image: url("../img/remise-en-forme-plage.jpg");    
+    background-image: url("../img/remise-en-forme-plage.jpg");
 }
-#img-stellar-ecole-natation span {      // aucune contrainte d'écran pour cette image
+
+#img-stellar-stand-up-paddle {
+    background-image: url("../img/stand-up-paddle.jpg");
+}
+
+#img-stellar-ecole-natation span {
+    // aucune contrainte d'écran pour cette image
     padding-top: 300px;
     color: #fff;
     .textShadow2;
 }
+
 @media (max-width: 991px) {
     #img-stellar-club-plage, #img-stellar-ecole-natation, #img-stellar-remise-forme {
         text-align: center;
     }
+
     #img-stellar-club-plage span {
         padding-top: 300px;
         color: #95cae5;
-        .textShadow1;
+        .textShadow1();
     }
-    #img-stellar-remise-forme span {
-        padding-top: 300px;
-        color: #fff;
-        .textShadow2;
+
+    #img-stellar-remise-forme, #img-stellar-stand-up-paddle {
+        span {
+            padding-top: 300px;
+            color: #fff;
+            .textShadow2();
+        }
     }
 }
+
 @media (min-width: 992px) {
     #img-stellar-ecole-natation {
         text-align: center;
     }
+
+    #img-stellar-stand-up-paddle {
+        text-align: center;
+        span {
+            position: absolute;
+            color: #fff;
+            left: 50%;
+            margin-left: -110px;
+            top: 200px;
+            .textShadow2();
+        }
+    }
+
     #img-stellar-club-plage span {
         position: absolute;
         color: #95cae5;
@@ -133,36 +181,40 @@ h1, h2, h3, h4, h5, h6 {
         left: 50%;
         margin-left: -400px;
         top: 280px;
-        .textShadow1;
+        .textShadow1();
     }
-    #img-stellar-remise-forme span {
-        position: absolute;
-        color: #fff;
-        max-width: 350px;
-        left: 50%;
-        margin-left: -400px;
-        top: 200px;
-        .textShadow2;
+
+    #img-stellar-remise-forme  {
+        span {
+            position: absolute;
+            color: #fff;
+            max-width: 350px;
+            left: 50%;
+            margin-left: -400px;
+            top: 200px;
+            .textShadow2();
+        }
     }
 }
 
 // section
 section.content {
     padding: 0 10px;
-    >header, >footer {
-        margin: 30px auto !important; // override class page-header
+    > header, > footer {
+//        margin: 30px auto !important; // override class page-header
     }
-    >header {
-        text-align: center;
-        padding-bottom: 0px !important; // override class page-header
-        >h1 {
-            color: #0088CC;
-            padding-top: 50px;
-            margin-top: -50px;
-        }
-    }
-    
+//    > header {
+////        text-align: center;
+////        padding-bottom: 0px !important; // override class page-header
+////        > h1 {
+////            color: #0088CC;
+////            padding-top: 50px;
+////            margin-top: -50px;
+////        }
+//    }
+
 }
+
 /*section#content-club-plage {
     background-image: url("../img/dessin-plage.png");
     background-repeat: no-repeat;
@@ -180,15 +232,20 @@ section#content-equipe, section#content-partenariat {
 article {
     h3 {
         text-decoration: underline;
-        text-align: center;
+//        text-align: center;
     }
     // colonne
     .columns {
-        -moz-columns: 6 250px; -webkit-columns: 6 250px; columns: 6 250px;
+//        -moz-columns: 6 250px;
+//        -webkit-columns: 6 250px;
+//        columns: 6 250px;
+
+        #elements > #content.columns(@colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #EEE, @columnRuleStyle: solid, @columnRuleWidth: 1px);
+
         p {
             hyphens: auto;
             text-align: justify;
-            word-spacing: 0.3ex;            
+            word-spacing: 0.3ex;
         }
     }
     .columns-small {
@@ -210,24 +267,25 @@ article {
 }
 
 // tarifs club plage
-section#content-club-plage article.tarif {
-    th:first-child,
-    td:first-child {
-        width: 20%;
-    }
-    th,
-    td {
-        width: 16%;
-    }
-    thead th {
-        height: 58px;
-    }
-    .hide {
-        font-style: italic;
-        text-decoration: underline;
+#content-club-plage {
+    .tarif {
+        th:first-child,
+        td:first-child {
+            width: 20%;
+        }
+        th,
+        td {
+            width: 16%;
+        }
+        thead th {
+            height: 58px;
+        }
+        .hide {
+            font-style: italic;
+            text-decoration: underline;
+        }
     }
 }
-
 
 // overwrite class thumbnails
 ul.thumbnails li div.thumbnail {
@@ -236,35 +294,54 @@ ul.thumbnails li div.thumbnail {
         border-radius: 0;
     }
 }
-section#content-partenariat ul.thumbnails li div.thumbnail {
-    //height: 382px;
-    img {
-        width: 100%;
-        padding: 40px;
-        max-width: 300px;
+
+#content-partenariat {
+    .thumbnails {
+        .thumbnail {
+            //height: 382px;
+            img {
+                width: 100%;
+                padding: 40px;
+                max-width: 300px;
+            }
+        }
     }
 }
-@media (max-width: 767px) { // equivalence col-xs*
-    section#cont-equipe ul.thumbnails li div.thumbnail {
-        height: 325px;
+
+#content-equipe {
+    .panel {
+        img {
+            width: 128px;
+            height: 128px;
+            max-width: none;
+        }
     }
 }
-@media (min-width: 768px) and (max-width: 991px) { // equivalence col-sm*
-    section#content-equipe ul.thumbnails li div.thumbnail {
-        height: 305px;
+
+// equivalence col-sm*
+@media (min-width: 768px) and (max-width: 991px) {
+    #content-equipe {
+        .panel {
+            height: 248px;
+        }
     }
 }
-@media (min-width: 992px) and (max-width: 1199px) { // equivalence col-md*
-    section#content-equipe ul.thumbnails li div.thumbnail {
-        height: 382px;
-    }
-    section#partenariat ul.thumbnails li img {
-        max-width: 300px;
+
+// equivalence col-md
+@media (min-width: 992px) and (max-width: 1199px) {
+    #content-equipe {
+        .panel {
+            height: 326px;
+        }
     }
 }
-@media (min-width: 1200px) { // equivalence col-lg*
-    section#content-equipe ul.thumbnails li div.thumbnail {
-        height: 382px;
+
+// equivalence col-lg
+@media (min-width: 1200px) {
+    #content-equipe {
+        .panel {
+            height: 225px;
+        }
     }
 }
 
@@ -275,15 +352,18 @@ section#content-partenariat ul.thumbnails li div.thumbnail {
     background-position: center right;
     padding-right: 20px;
 }
+
 .separator {
     border: 0 none;
     border-bottom: 1px solid #EEEEEE;
     margin: 20px 0 30px;
 }
+
 .well-blue {
     background-color: #D4EBF7;
     border-color: #95cae5;
 }
+
 .arrow-blue {
     display: block;
     background-image: url("../img/arrow-blue.png");
