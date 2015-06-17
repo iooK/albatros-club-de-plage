@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" class="no-js">
-<html>
+<html lang="fr" class="no-js" ng-app="webApp">
 	<head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -25,50 +24,39 @@
         <meta name="msapplication-TileImage" content="icons/mstile-144x144.png">
         <meta name="msapplication-config" content="icons/browserconfig.xml">
 
-        <link rel="stylesheet" href="css/main.css">
+        <!-- integrate css -->
+        <link rel="stylesheet" href="/dist/css/albatros.css">
+        <!-- integrate css -->
 
 	</head>
 	<body data-spy="scroll" data-target=".navbar">
 
-        <!--[if lt IE 7]>
-        <p class="browsehappy">Vous utilisez une version <strong>dépassée</strong> de votre navigateur. Merci <a href="http://browsehappy.com/">de mettre à jour votre navigateur</a> pour une expérience optimale.</p>
-        <![endif]-->
+        <div ui-view="navigation"></div>
+        <div ui-view="club-plage.cover"></div>
+        <div ui-view="club-plage"></div>
+        <div ui-view="ecole-natation.cover"></div>
+        <div ui-view="ecole-natation"></div>
+        <div ui-view="remise-forme.cover"></div>
+        <div ui-view="remise-forme"></div>
+        <div ui-view="stand-up-paddle.cover"></div>
+        <div ui-view="stand-up-paddle"></div>
+        <div ui-view="equipe"></div>
+        <div ui-view="contact"></div>
+        <div ui-view="partenaire"></div>
 
-	    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main">
-                        <span class="sr-only">Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/">Albatros</a>
-                </div>
+        <!-- integrate js -->
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="bower_components/jquery.stellar/jquery.stellar.min.js"></script>
+        <script src="bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+        <!-- integrate js -->
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="navbar-main">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#club-plage" class="slowMotion">Club de Plage</a></li>
-                        <li><a href="#ecole-natation" class="slowMotion">Ecole de Natation</a></li>
-                        <li><a href="#remise-forme" class="slowMotion">Remise en Forme</a></li>
-                        <li><a href="#stand-up-paddle" class="slowMotion">Stand Up Paddle</a></li>
-                        <li><a href="#equipe" class="slowMotion">l'Equipe</a></li>
-                        <li><a href="#contact" class="slowMotion">Contact</a></li>
-                        <li><a href="#partenariat" class="slowMotion">Partenariat</a></li>
-                        <li class="divider-vertical"></li>
-                        <li><a class="logo-facebook" href="https://www.facebook.com/AlbatrosClubDePlage" target="_blank"><span>Voir la page Facebook</span></a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-
-        <script src="js/jquery-1.11.1.min.js"></script>
-		<script src="css/bootstrap-3.3.4/dist/js/bootstrap.min.js"></script>
-        <!-- <script src="js/plugins.js"></script> -->
-		<script src="js/jquery.stellar.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARwOqZ7bqNp6Va9hiyrCxbbCVUyD1Bmxg"></script>
+
+        <script src="dist/js/app.min.js"></script>
+
 		<script>
 
             var gMap,
@@ -85,16 +73,16 @@
 
 
 			// fonction de détection des appareils mobiles
-			isTouchDevice = function() {
+			isDeviceTouch = function() {
 			  return !!('ontouchstart' in document.documentElement) // works on most browsers
 				  || !!('onmsgesturechange' in window); // works on ie10
 			};
-            isGeolocdevice = function() {
+            isDeviceGeoloc = function() {
                 return navigator.geolocation;
             };
 
             calcMapRoute = function(type) {
-                if (!isGeolocdevice()) {
+                if (!isDeviceGeoloc()) {
                     gInfoWindow.setContent(contentError);
                     return false;
                 }
@@ -118,8 +106,8 @@
                         });
                     },
                     // error
-                    function(positionError) {
-                        gInfoWindow.setContent(contentError);
+                    function(error) {
+                        gInfoWindow.setContent(error);
                     },
                     {enableHighAccuracy:true}
                 );
@@ -176,8 +164,7 @@
 			!function ($) {
 
                 // pour les versions non mobile
-				if (!isTouchDevice()) {
-
+				if (!isDeviceTouch()) {
 					// démarrage de stellar
 					$.stellar({
 						horizontalScrolling: false,

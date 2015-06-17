@@ -1,93 +1,110 @@
 module.exports = function(grunt) {
+    'use strict';
+
+    // Force use of Unix newlines
+    grunt.util.linefeed = '\n';
 
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        //less: {
+        //    main: {
+        //        options: {
+        //            //compress: true,
+        //            sourceMap: true,
+        //            sourceMapFilename: "dist/css/bootstrap-theme-custom.css.map",
+        //            sourceMapURL: '/dist/css/bootstrap-theme-custom.css.map'
+        //        },
+        //        // Preprocess css styles
+        //        files: {
+        //            "dist/css/bootstrap-theme-custom.css": "src/less/bootstrap-custom.less"
+        //        }
+        //    }
+        //},
+
+        // Empties dist directory
+        clean: {
+            dist: 'dist',
+            docs: 'docs/dist'
+        },
+
         less: {
-            main: {
+            compileCore: {
                 options: {
-                    //compress: true,
+                    strictMath: true,
                     sourceMap: true,
-                    sourceMapFilename: "dist/css/bootstrap-theme-custom.css.map",
-                    sourceMapURL: '/dist/css/bootstrap-theme-custom.css.map'
+                    outputSourceFiles: true,
+                    sourceMapURL: '<%= pkg.name %>.css.map',
+                    sourceMapFilename: 'dist/css/<%= pkg.name %>.css.map'
                 },
-                // Preprocess css styles
-                files: {
-                    "dist/css/bootstrap-theme-custom.css": "src/less/bootstrap-custom.less"
-                }
+                src: 'src/less/main.less',
+                dest: 'dist/css/<%= pkg.name %>.css'
             }
         },
 
-        concat: {
-            options: {
-                separator: ';'
-            },
-            // Concat third party libs
-            dist: {
-                src: ['src/js/lib/**/*.js'],
-                dest: 'dist/js/lib.js'
-            }
-        },
-
+        //concat: {
+        //    options: {
+        //        separator: ';'
+        //    },
+        //    // Concat third party libs
+        //    dist: {
+        //        src: ['src/js/lib/**/*.js'],
+        //        dest: 'dist/js/lib.js'
+        //    }
+        //},
+        //
         uglify: {
             options: {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
-                mangle: false
+                mangle: false,
+                sourceMap: true
             },
-            // Uglify Angular app files
             main: {
                 files: {
-                    'dist/js/app.min.js': ['app/**/*.js']
+                    'dist/js/app.min.js': ['app/app.js', 'app/**/*.js']
                 }
             }
-        },
-
-        copy: {
-            // Copie images
-            img: {
-                expand: true,
-                cwd: 'src/img/',
-                src: '**',
-                dest: 'dist/img/'
-            },
-            // Copie des fonts
-            fonts: {
-                expand: true,
-                cwd: 'src/fonts/',
-                src: '**',
-                dest: 'dist/fonts/'
-            }
-        },
-
-        // Empties dist directory
-        clean: ["dist"],
-
-        watch: {
-            stylesheets: {
-                files: ['src/less/**/*.less'],
-                tasks: ['less']
-            },
-            app_scripts: {
-                files: ['app/**/*.js', 'src/js/**/*.js'],
-                tasks: ['uglify', 'copy']
-            },
-            images: {
-                files: ['src/img/**'],
-                tasks: ['copy']
-            }
         }
+        //
+        //copy: {
+        //    // Copie images
+        //    img: {
+        //        expand: true,
+        //        cwd: 'src/img/',
+        //        src: '**',
+        //        dest: 'dist/img/'
+        //    },
+        //    // Copie des fonts
+        //    fonts: {
+        //        expand: true,
+        //        cwd: 'src/fonts/',
+        //        src: '**',
+        //        dest: 'dist/fonts/'
+        //    }
+        //},
+        //
+        //watch: {
+        //    stylesheets: {
+        //        files: ['src/less/**/*.less'],
+        //        tasks: ['less']
+        //    },
+        //    app_scripts: {
+        //        files: ['app/**/*.js', 'src/js/**/*.js'],
+        //        tasks: ['uglify', 'copy']
+        //    },
+        //    images: {
+        //        files: ['src/img/**'],
+        //        tasks: ['copy']
+        //    }
+        //}
     });
 
     // Load the plugin that provides the "uglify" task.
-    grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-watch');
+    require('load-grunt-tasks')(grunt, { scope: 'devDependencies' });
+    require('time-grunt')(grunt);
 
     // Default task(s).
-    grunt.registerTask('default', ['clean', 'concat', 'uglify', 'less', 'copy']);
+    grunt.registerTask('default', ['clean:dist', 'less:compileCore', 'uglify']);
 
 };

@@ -5,7 +5,9 @@
     "bootstrap": "~3.3.5",
     "elements": "git@github.com:Oreolek/elements.git",
     "fontawesome": "~4.3.0",
-    "angular": "~1.4.1"
+    "angular": "~1.4.1",
+    "jquery.stellar": "~0.6.2",
+    "angular-ui-router": "~0.2.15"
   },
   "devDependencies": {}
 }

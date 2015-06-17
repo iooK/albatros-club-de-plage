@@ -4,9 +4,14 @@
 @import "mixins.less";
 @import "variables.less";
 
-@import "tables.less";
 @import "panels.less";
+@import "tables.less";
 
+#content-equipe {
+    .thumbnail {
+        min-height: 512px;
+    }
+}
 
 .page-header {
     & {
@@ -103,7 +108,6 @@ body {
 // override h*
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold !important;
-    .text-center();
 }
 
 
@@ -158,7 +162,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #img-stellar-club-plage {
-    background-image: url("../img/enfant-plage-ocean2.jpg");
+    background-image: url("/img/enfant-plage-ocean2.jpg");
     span {
         .text-shadow-1();
         color: #95cae5;
@@ -178,11 +182,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #img-stellar-ecole-natation {
-    background-image: url("../img/ecole_natation.jpg");
+    background-image: url("/img/ecole_natation.jpg");
 }
 
 #img-stellar-remise-forme {
-    background-image: url("../img/remise-en-forme-plage.jpg");
+    background-image: url("/img/remise-en-forme-plage.jpg");
     span {
         .text-shadow-2();
 
@@ -197,7 +201,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #img-stellar-stand-up-paddle {
-    background-image: url("../img/stand-up-paddle.jpg");
+    background-image: url("/img/stand-up-paddle.jpg");
 
     @media (min-width: 992px) {
         .text-center();
@@ -340,7 +344,7 @@ ul.thumbnails li div.thumbnail {
 
 /* main class */
 .logo-facebook span {
-    background-image: url("../img/logo-facebook.png");
+    background-image: url("/img/logo-facebook.png");
     background-repeat: no-repeat;
     background-position: center right;
     padding-right: 20px;
