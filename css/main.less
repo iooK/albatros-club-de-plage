@@ -1,16 +1,53 @@
 @import "./bootstrap-3.3.4/less/bootstrap.less";
 @import "./font-awesome-4.3.0/less/font-awesome.less";
 #elements { @import "./elements/elements.less"; }
+@import "./less/mixins.less";
 @import "./less/variables.less";
 
+@import "./less/tables.less";
+@import "./less/panels.less";
+
+
 .page-header {
-    text-align: center;
-    padding-bottom: 0;
-    h1 {
-        color: #0088CC;
-        padding-top: 60px;
-        margin-top: -60px;
+    & {
+        text-align: center;
+        padding-bottom: 0;
+
+        h1 {
+            color: @blue-dark;
+            padding-top: 60px;
+            margin-top: -60px;
+        }
     }
+    &&-big-padding {
+        padding-bottom: 26.5px;
+    }
+
+    section > & {
+        border-color: @blue-dark;
+    }
+}
+
+.columns {
+    & {
+        margin-top: 40px;
+        #elements > #content.columns(@colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #EEE, @columnRuleStyle: solid, @columnRuleWidth: 1px);
+    }
+    &&-small {
+        #elements > #content.columns(@colwidth: 200px, @colcount: 0, @colgap: 50px, @columnRuleColor: #EEE, @columnRuleStyle: solid, @columnRuleWidth: 1px);
+    }
+
+    p {
+        hyphens: auto;
+        text-align: justify;
+        word-spacing: 0.3ex;
+    }
+}
+
+.separator {
+    border: 0 none;
+    border-bottom: 1px solid @blue-light;
+    margin: 20px 0 30px;
 }
 
 .fa {
@@ -18,6 +55,17 @@
         font-size: 10px;
     }
 }
+
+footer {
+    margin-bottom: 30px;
+
+    .fa-arrow-circle-down {
+        font-size: 45px;
+    }
+}
+
+
+//////////////////////////////////////////
 
 body {
     margin-bottom: 40px !important;
@@ -83,24 +131,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-// plugin stellar
-.backgroundSizeCover {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.textShadow1 {
+.text-shadow-1 {
     #elements > #shadow.text(~"0 2px 0 black, 1px 0 20px black, 0 1px 20px black");
 }
 
-.textShadow2 {
+.text-shadow-2 {
     #elements > #shadow.text(~"0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black");
 }
 
 .img-stellar {
-    .backgroundSizeCover();
+    background-size: cover;
     background-attachment: scroll;
     background-position: 50% 0;
     background-repeat: no-repeat;
@@ -108,14 +148,33 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
 }
 
-.img-stellar span {
-    display: block;
-    font-size: 38px;
-    line-height: 38px;
+.img-stellar {
+    span {
+        display: block;
+        font-size: 38px;
+        line-height: 38px;
+        color: #fff;
+    }
 }
 
 #img-stellar-club-plage {
     background-image: url("../img/enfant-plage-ocean2.jpg");
+    span {
+        .text-shadow-1();
+        color: #95cae5;
+
+        @media (max-width: 991px) {
+            padding-top: 300px;
+        }
+
+        @media (min-width: 992px) {
+            position: absolute;
+            max-width: 500px;
+            left: 50%;
+            margin-left: -400px;
+            top: 280px;
+        }
+    }
 }
 
 #img-stellar-ecole-natation {
@@ -124,104 +183,86 @@ h1, h2, h3, h4, h5, h6 {
 
 #img-stellar-remise-forme {
     background-image: url("../img/remise-en-forme-plage.jpg");
-}
+    span {
+        .text-shadow-2();
 
-#img-stellar-stand-up-paddle {
-    background-image: url("../img/stand-up-paddle.jpg");
-}
-
-#img-stellar-ecole-natation span {
-    // aucune contrainte d'écran pour cette image
-    padding-top: 300px;
-    color: #fff;
-    .textShadow2;
-}
-
-@media (max-width: 991px) {
-    #img-stellar-club-plage, #img-stellar-ecole-natation, #img-stellar-remise-forme {
-        text-align: center;
-    }
-
-    #img-stellar-club-plage span {
-        padding-top: 300px;
-        color: #95cae5;
-        .textShadow1();
-    }
-
-    #img-stellar-remise-forme, #img-stellar-stand-up-paddle {
-        span {
-            padding-top: 300px;
-            color: #fff;
-            .textShadow2();
-        }
-    }
-}
-
-@media (min-width: 992px) {
-    #img-stellar-ecole-natation {
-        text-align: center;
-    }
-
-    #img-stellar-stand-up-paddle {
-        text-align: center;
-        span {
+        @media (min-width: 992px) {
             position: absolute;
-            color: #fff;
-            left: 50%;
-            margin-left: -110px;
-            top: 200px;
-            .textShadow2();
-        }
-    }
-
-    #img-stellar-club-plage span {
-        position: absolute;
-        color: #95cae5;
-        max-width: 500px;
-        left: 50%;
-        margin-left: -400px;
-        top: 280px;
-        .textShadow1();
-    }
-
-    #img-stellar-remise-forme  {
-        span {
-            position: absolute;
-            color: #fff;
             max-width: 350px;
             left: 50%;
             margin-left: -400px;
             top: 200px;
-            .textShadow2();
         }
     }
 }
 
-// section
-section.content {
-    padding: 0 10px;
-    > header, > footer {
-//        margin: 30px auto !important; // override class page-header
-    }
-//    > header {
-////        text-align: center;
-////        padding-bottom: 0px !important; // override class page-header
-////        > h1 {
-////            color: #0088CC;
-////            padding-top: 50px;
-////            margin-top: -50px;
-////        }
-//    }
+#img-stellar-stand-up-paddle {
+    background-image: url("../img/stand-up-paddle.jpg");
 
+    @media (min-width: 992px) {
+        .text-center();
+    }
+    span {
+        .text-shadow-2();
+
+        @media (min-width: 992px) {
+            position: absolute;
+            left: 50%;
+            margin-left: -110px;
+            top: 200px;
+        }
+    }
 }
 
-/*section#content-club-plage {
-    background-image: url("../img/dessin-plage.png");
-    background-repeat: no-repeat;
-    background-size: 10%;
-    background-position: 70% 10px;
-}*/
-section#content-equipe, section#content-partenariat {
+#img-stellar-ecole-natation {
+    span {
+        // aucune contrainte d'écran pour cette image
+        padding-top: 300px;
+        .text-shadow-2();
+    }
+
+    @media (min-width: 992px) {
+        .text-center();
+    }
+}
+
+#img-stellar-remise-forme, #img-stellar-stand-up-paddle {
+    span {
+        .text-shadow-2();
+
+        @media (max-width: 991px) {
+            padding-top: 300px;
+        }
+    }
+}
+
+#img-stellar-club-plage, #img-stellar-ecole-natation, #img-stellar-remise-forme {
+    @media (max-width: 991px) {
+        text-align: center;
+    }
+}
+
+
+// section
+//section.content {
+//    padding: 0 10px;
+//    > header, > footer {
+//        margin: 30px auto !important; // override class page-header
+//    }
+//    > header {
+//        text-align: center;
+//        padding-bottom: 0px !important; // override class page-header
+//        > h1 {
+//            color: #0088CC;
+//            padding-top: 50px;
+//            margin-top: -50px;
+//        }
+//    }
+//
+//}
+
+#content-equipe,
+#content-partenariat {
     background-color: #F5F5F5;
     border-top: 1px solid #E3E3E3;
     border-bottom: 1px solid #E3E3E3;
@@ -232,58 +273,10 @@ section#content-equipe, section#content-partenariat {
 article {
     h3 {
         text-decoration: underline;
-//        text-align: center;
     }
     // colonne
-    .columns {
-//        -moz-columns: 6 250px;
-//        -webkit-columns: 6 250px;
-//        columns: 6 250px;
-
-        #elements > #content.columns(@colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #EEE, @columnRuleStyle: solid, @columnRuleWidth: 1px);
-
-        p {
-            hyphens: auto;
-            text-align: justify;
-            word-spacing: 0.3ex;
-        }
-    }
-    .columns-small {
-        -moz-columns: 6 200px;
-        -webkit-columns: 6 200px;
-        columns: 6 200px;
-    }
-    // horaire
-    &.horaire th, &.horaire td {
-        border: none !important;
-    }
-    // tarif
-    &.tarif h4 {
-        text-align: center;
-    }
     h4.well {
         margin-top: 0;
-    }
-}
-
-// tarifs club plage
-#content-club-plage {
-    .tarif {
-        th:first-child,
-        td:first-child {
-            width: 20%;
-        }
-        th,
-        td {
-            width: 16%;
-        }
-        thead th {
-            height: 58px;
-        }
-        .hide {
-            font-style: italic;
-            text-decoration: underline;
-        }
     }
 }
 
@@ -353,22 +346,7 @@ ul.thumbnails li div.thumbnail {
     padding-right: 20px;
 }
 
-.separator {
-    border: 0 none;
-    border-bottom: 1px solid #EEEEEE;
-    margin: 20px 0 30px;
-}
-
 .well-blue {
     background-color: #D4EBF7;
     border-color: #95cae5;
-}
-
-.arrow-blue {
-    display: block;
-    background-image: url("../img/arrow-blue.png");
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: 75px;
-    height: 40px;
 }

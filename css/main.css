@@ -1075,7 +1075,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333333;
+  color: #180203;
   background-color: #ffffff;
 }
 input,
@@ -1087,12 +1087,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+  color: #43a1d1;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #23527c;
+  color: #2777a0;
   text-decoration: underline;
 }
 a:focus {
@@ -1391,7 +1391,7 @@ a.bg-danger:hover {
 .page-header {
   padding-bottom: 9px;
   margin: 40px 0 20px;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #d4ebf7;
 }
 ul,
 ol {
@@ -2882,7 +2882,7 @@ select[multiple].form-group-lg .form-control {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #737373;
+  color: #8e0c12;
 }
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -3294,7 +3294,7 @@ fieldset[disabled] .btn-danger.active {
   background-color: #ffffff;
 }
 .btn-link {
-  color: #337ab7;
+  color: #43a1d1;
   font-weight: normal;
   border-radius: 0;
 }
@@ -3315,7 +3315,7 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #23527c;
+  color: #2777a0;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -3886,7 +3886,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #337ab7;
+  border-color: #43a1d1;
 }
 .nav .nav-divider {
   height: 1px;
@@ -4605,7 +4605,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: 6px 12px;
   line-height: 1.42857143;
   text-decoration: none;
-  color: #337ab7;
+  color: #43a1d1;
   background-color: #ffffff;
   border: 1px solid #dddddd;
   margin-left: -1px;
@@ -4625,7 +4625,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-  color: #23527c;
+  color: #2777a0;
   background-color: #eeeeee;
   border-color: #dddddd;
 }
@@ -4821,7 +4821,7 @@ a.badge:focus {
 }
 .list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #337ab7;
+  color: #43a1d1;
   background-color: #ffffff;
 }
 .list-group-item > .badge {
@@ -4892,11 +4892,11 @@ a.badge:focus {
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #337ab7;
+  border-color: #43a1d1;
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #333333;
+  color: #180203;
 }
 .alert {
   padding: 15px;
@@ -8364,17 +8364,224 @@ button.close {
     More info at: http://lesselements.com
 -----------------------------------------------------*/
 }
+.table.table-calendar > thead:first-child > tr:first-child > th,
+.table.table-prices > thead:first-child > tr:first-child > th {
+  text-align: center;
+}
+.table.table-calendar > tbody > tr > td,
+.table.table-prices > tbody > tr > td,
+.table.table-calendar > tfoot > tr > td,
+.table.table-prices > tfoot > tr > td {
+  text-align: center;
+}
+.table.table-prices {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.table.table-prices > thead > tr > th,
+.table.table-prices > tbody > tr > th,
+.table.table-prices > tfoot > tr > th,
+.table.table-prices > thead > tr > td,
+.table.table-prices > tbody > tr > td,
+.table.table-prices > tfoot > tr > td {
+  border: none;
+}
+.table.table-prices > thead > tr > th.short,
+.table.table-prices > tbody > tr > th.short,
+.table.table-prices > tfoot > tr > th.short,
+.table.table-prices > thead > tr > td.short,
+.table.table-prices > tbody > tr > td.short,
+.table.table-prices > tfoot > tr > td.short {
+  width: 10px;
+}
+.table.table-prices > thead:first-child > tr:first-child > th {
+  border-left: 1px solid #43a1d1;
+  border-right: 1px solid #43a1d1;
+  border-top: 1px solid #43a1d1;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: #d4ebf7;
+  padding: 50px 0;
+}
+.table.table-prices > thead:first-child > tr:first-child > th:first-child,
+.table.table-prices > thead:first-child > tr:first-child > th.short {
+  background-color: transparent;
+  border: none;
+}
+.table.table-prices > thead:first-child > tr:first-child > th:last-child {
+  background-color: #95cae5;
+}
+.table.table-prices > tbody > tr > th,
+.table.table-prices > tfoot > tr > th {
+  padding-left: 20px;
+}
+.table.table-prices > tbody > tr > td,
+.table.table-prices > tfoot > tr > td {
+  text-align: center;
+}
+.table.table-prices > tbody > tr > td.short,
+.table.table-prices > tfoot > tr > td.short {
+  border: none;
+}
+.table.table-prices > tbody > tr > td {
+  border-left: 1px solid #43a1d1;
+  border-right: 1px solid #43a1d1;
+}
+.table.table-prices tfoot > tr > td {
+  border-left: 1px solid #43a1d1;
+  border-right: 1px solid #43a1d1;
+  border-bottom: 1px solid #43a1d1;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.table.table-striped.table-prices > tbody > tr:nth-of-type(odd) {
+  background-color: transparent;
+}
+.table.table-striped.table-prices > tbody > tr:nth-of-type(even) {
+  background-color: #eaf5fb;
+}
+.table.table-hover.table-prices > tbody > tr:hover {
+  background-color: #ddeff9;
+}
+.panel.panel-prices {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #43a1d1;
+  text-align: center;
+}
+.panel.panel-prices > .panel-heading {
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: #95cae5;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-weight: bold;
+}
+.panel.panel-prices > .panel-heading-light {
+  background-color: #d4ebf7;
+}
+.panel.panel-prices > .panel-body {
+  font-size: 32px;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
 .page-header {
   text-align: center;
   padding-bottom: 0;
 }
 .page-header h1 {
-  color: #0088CC;
+  color: #43a1d1;
   padding-top: 60px;
   margin-top: -60px;
 }
+.page-header.page-header-big-padding {
+  padding-bottom: 26.5px;
+}
+section > .page-header {
+  border-color: #43a1d1;
+}
+.columns {
+  margin-top: 40px;
+  -moz-column-width: 250px;
+  -moz-column-count: 0;
+  -moz-column-gap: 50px;
+  -moz-column-rule-color: #eeeeee;
+  -moz-column-rule-style: solid;
+  -moz-column-rule-width: 1px;
+  -webkit-column-width: 250px;
+  -webkit-column-count: 0;
+  -webkit-column-gap: 50px;
+  -webkit-column-rule-color: #eeeeee;
+  -webkit-column-rule-style: solid;
+  -webkit-column-rule-width: 1px;
+  column-width: 250px;
+  column-count: 0;
+  column-gap: 50px;
+  column-rule-color: #eeeeee;
+  column-rule-style: solid;
+  column-rule-width: 1px;
+}
+.columns.columns-small {
+  -moz-column-width: 200px;
+  -moz-column-count: 0;
+  -moz-column-gap: 50px;
+  -moz-column-rule-color: #eeeeee;
+  -moz-column-rule-style: solid;
+  -moz-column-rule-width: 1px;
+  -webkit-column-width: 200px;
+  -webkit-column-count: 0;
+  -webkit-column-gap: 50px;
+  -webkit-column-rule-color: #eeeeee;
+  -webkit-column-rule-style: solid;
+  -webkit-column-rule-width: 1px;
+  column-width: 200px;
+  column-count: 0;
+  column-gap: 50px;
+  column-rule-color: #eeeeee;
+  column-rule-style: solid;
+  column-rule-width: 1px;
+}
+.columns p {
+  hyphens: auto;
+  text-align: justify;
+  word-spacing: 0.3ex;
+}
+.separator {
+  border: 0 none;
+  border-bottom: 1px solid #d4ebf7;
+  margin: 20px 0 30px;
+}
 .fa.fa-chevron-right {
   font-size: 10px;
+}
+footer {
+  margin-bottom: 30px;
+}
+footer .fa-arrow-circle-down {
+  font-size: 45px;
 }
 body {
   margin-bottom: 40px !important;
@@ -8431,13 +8638,7 @@ h6 {
   background-color: #0088CC !important;
   color: #FFFFFF !important;
 }
-.backgroundSizeCover {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-.textShadow1 {
+.text-shadow-1 {
   -webkit-text-shadow: 0 2px 0 black, 1px 0 20px black, 0 1px 20px black;
   -moz-text-shadow: 0 2px 0 black, 1px 0 20px black, 0 1px 20px black;
   text-shadow: 0 2px 0 black, 1px 0 20px black, 0 1px 20px black;
@@ -8445,7 +8646,7 @@ h6 {
   -o-text-shadow: 0 2px 0 black, 1px 0 20px black, 0 1px 20px black;
   -khtml-text-shadow: 0 2px 0 black, 1px 0 20px black, 0 1px 20px black;
 }
-.textShadow2 {
+.text-shadow-2 {
   -webkit-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
   -moz-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
   text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
@@ -8454,9 +8655,6 @@ h6 {
   -khtml-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
 }
 .img-stellar {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   background-attachment: scroll;
   background-position: 50% 0;
@@ -8468,9 +8666,33 @@ h6 {
   display: block;
   font-size: 38px;
   line-height: 38px;
+  color: #fff;
 }
 #img-stellar-club-plage {
   background-image: url("../img/enfant-plage-ocean2.jpg");
+}
+#img-stellar-club-plage span {
+  -webkit-text-shadow: 0 2px 0 black, 1px 0 20px black, 0 1px 20px black;
+  -moz-text-shadow: 0 2px 0 black, 1px 0 20px black, 0 1px 20px black;
+  text-shadow: 0 2px 0 black, 1px 0 20px black, 0 1px 20px black;
+  -ms-text-shadow: 0 2px 0 black, 1px 0 20px black, 0 1px 20px black;
+  -o-text-shadow: 0 2px 0 black, 1px 0 20px black, 0 1px 20px black;
+  -khtml-text-shadow: 0 2px 0 black, 1px 0 20px black, 0 1px 20px black;
+  color: #95cae5;
+}
+@media (max-width: 991px) {
+  #img-stellar-club-plage span {
+    padding-top: 300px;
+  }
+}
+@media (min-width: 992px) {
+  #img-stellar-club-plage span {
+    position: absolute;
+    max-width: 500px;
+    left: 50%;
+    margin-left: -400px;
+    top: 280px;
+  }
 }
 #img-stellar-ecole-natation {
   background-image: url("../img/ecole_natation.jpg");
@@ -8478,12 +8700,63 @@ h6 {
 #img-stellar-remise-forme {
   background-image: url("../img/remise-en-forme-plage.jpg");
 }
+#img-stellar-remise-forme span {
+  -webkit-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
+  -moz-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
+  text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
+  -ms-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
+  -o-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
+  -khtml-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
+}
+@media (min-width: 992px) {
+  #img-stellar-remise-forme span {
+    position: absolute;
+    max-width: 350px;
+    left: 50%;
+    margin-left: -400px;
+    top: 200px;
+  }
+}
 #img-stellar-stand-up-paddle {
   background-image: url("../img/stand-up-paddle.jpg");
 }
+@media (min-width: 992px) {
+  #img-stellar-stand-up-paddle {
+    text-align: center;
+  }
+}
+#img-stellar-stand-up-paddle span {
+  -webkit-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
+  -moz-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
+  text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
+  -ms-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
+  -o-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
+  -khtml-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
+}
+@media (min-width: 992px) {
+  #img-stellar-stand-up-paddle span {
+    position: absolute;
+    left: 50%;
+    margin-left: -110px;
+    top: 200px;
+  }
+}
 #img-stellar-ecole-natation span {
   padding-top: 300px;
-  color: #fff;
+  -webkit-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
+  -moz-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
+  text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
+  -ms-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
+  -o-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
+  -khtml-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
+}
+@media (min-width: 992px) {
+  #img-stellar-ecole-natation {
+    text-align: center;
+  }
+}
+#img-stellar-remise-forme span,
+#img-stellar-stand-up-paddle span {
   -webkit-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
   -moz-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
   text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
@@ -8492,93 +8765,20 @@ h6 {
   -khtml-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
 }
 @media (max-width: 991px) {
+  #img-stellar-remise-forme span,
+  #img-stellar-stand-up-paddle span {
+    padding-top: 300px;
+  }
+}
+@media (max-width: 991px) {
   #img-stellar-club-plage,
   #img-stellar-ecole-natation,
   #img-stellar-remise-forme {
     text-align: center;
   }
-  #img-stellar-club-plage span {
-    padding-top: 300px;
-    color: #95cae5;
-    -webkit-text-shadow: 0 2px 0 black, 1px 0 20px black, 0 1px 20px black;
-    -moz-text-shadow: 0 2px 0 black, 1px 0 20px black, 0 1px 20px black;
-    text-shadow: 0 2px 0 black, 1px 0 20px black, 0 1px 20px black;
-    -ms-text-shadow: 0 2px 0 black, 1px 0 20px black, 0 1px 20px black;
-    -o-text-shadow: 0 2px 0 black, 1px 0 20px black, 0 1px 20px black;
-    -khtml-text-shadow: 0 2px 0 black, 1px 0 20px black, 0 1px 20px black;
-  }
-  #img-stellar-remise-forme span,
-  #img-stellar-stand-up-paddle span {
-    padding-top: 300px;
-    color: #fff;
-    -webkit-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
-    -moz-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
-    text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
-    -ms-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
-    -o-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
-    -khtml-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
-  }
 }
-@media (min-width: 992px) {
-  #img-stellar-ecole-natation {
-    text-align: center;
-  }
-  #img-stellar-stand-up-paddle {
-    text-align: center;
-  }
-  #img-stellar-stand-up-paddle span {
-    position: absolute;
-    color: #fff;
-    left: 50%;
-    margin-left: -110px;
-    top: 200px;
-    -webkit-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
-    -moz-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
-    text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
-    -ms-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
-    -o-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
-    -khtml-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
-  }
-  #img-stellar-club-plage span {
-    position: absolute;
-    color: #95cae5;
-    max-width: 500px;
-    left: 50%;
-    margin-left: -400px;
-    top: 280px;
-    -webkit-text-shadow: 0 2px 0 black, 1px 0 20px black, 0 1px 20px black;
-    -moz-text-shadow: 0 2px 0 black, 1px 0 20px black, 0 1px 20px black;
-    text-shadow: 0 2px 0 black, 1px 0 20px black, 0 1px 20px black;
-    -ms-text-shadow: 0 2px 0 black, 1px 0 20px black, 0 1px 20px black;
-    -o-text-shadow: 0 2px 0 black, 1px 0 20px black, 0 1px 20px black;
-    -khtml-text-shadow: 0 2px 0 black, 1px 0 20px black, 0 1px 20px black;
-  }
-  #img-stellar-remise-forme span {
-    position: absolute;
-    color: #fff;
-    max-width: 350px;
-    left: 50%;
-    margin-left: -400px;
-    top: 200px;
-    -webkit-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
-    -moz-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
-    text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
-    -ms-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
-    -o-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
-    -khtml-text-shadow: 0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black;
-  }
-}
-section.content {
-  padding: 0 10px;
-}
-/*section#content-club-plage {
-    background-image: url("../img/dessin-plage.png");
-    background-repeat: no-repeat;
-    background-size: 10%;
-    background-position: 70% 10px;
-}*/
-section#content-equipe,
-section#content-partenariat {
+#content-equipe,
+#content-partenariat {
   background-color: #F5F5F5;
   border-top: 1px solid #E3E3E3;
   border-bottom: 1px solid #E3E3E3;
@@ -8587,60 +8787,8 @@ section#content-partenariat {
 article h3 {
   text-decoration: underline;
 }
-article .columns {
-  -moz-column-width: 250px;
-  -moz-column-count: 0;
-  -moz-column-gap: 50px;
-  -moz-column-rule-color: #eeeeee;
-  -moz-column-rule-style: solid;
-  -moz-column-rule-width: 1px;
-  -webkit-column-width: 250px;
-  -webkit-column-count: 0;
-  -webkit-column-gap: 50px;
-  -webkit-column-rule-color: #eeeeee;
-  -webkit-column-rule-style: solid;
-  -webkit-column-rule-width: 1px;
-  column-width: 250px;
-  column-count: 0;
-  column-gap: 50px;
-  column-rule-color: #eeeeee;
-  column-rule-style: solid;
-  column-rule-width: 1px;
-}
-article .columns p {
-  hyphens: auto;
-  text-align: justify;
-  word-spacing: 0.3ex;
-}
-article .columns-small {
-  -moz-columns: 6 200px;
-  -webkit-columns: 6 200px;
-  columns: 6 200px;
-}
-article.horaire th,
-article.horaire td {
-  border: none !important;
-}
-article.tarif h4 {
-  text-align: center;
-}
 article h4.well {
   margin-top: 0;
-}
-#content-club-plage .tarif th:first-child,
-#content-club-plage .tarif td:first-child {
-  width: 20%;
-}
-#content-club-plage .tarif th,
-#content-club-plage .tarif td {
-  width: 16%;
-}
-#content-club-plage .tarif thead th {
-  height: 58px;
-}
-#content-club-plage .tarif .hide {
-  font-style: italic;
-  text-decoration: underline;
 }
 ul.thumbnails li div.thumbnail {
   background-color: white !important;
@@ -8680,20 +8828,7 @@ ul.thumbnails li div.thumbnail img.img-thumbnail {
   background-position: center right;
   padding-right: 20px;
 }
-.separator {
-  border: 0 none;
-  border-bottom: 1px solid #EEEEEE;
-  margin: 20px 0 30px;
-}
 .well-blue {
   background-color: #D4EBF7;
   border-color: #95cae5;
-}
-.arrow-blue {
-  display: block;
-  background-image: url("../img/arrow-blue.png");
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: 75px;
-  height: 40px;
 }
