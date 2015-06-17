@@ -4,6 +4,9 @@ module.exports = function(grunt) {
     // Force use of Unix newlines
     grunt.util.linefeed = '\n';
 
+    // User external for config
+    var configBridge = grunt.file.readJSON('./Gruntconfig.json', { encoding: 'utf8' });
+
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -13,8 +16,10 @@ module.exports = function(grunt) {
             dist: 'dist'
         },
 
+
+        // grunt less file
         less: {
-            main: {
+            core: {
                 options: {
                     strictMath: true,
                     sourceMap: true,
@@ -26,7 +31,30 @@ module.exports = function(grunt) {
                 dest: 'dist/css/<%= pkg.name %>.css'
             }
         },
+        autoprefixer: {
+            options: {
+                browsers: configBridge.config.autoprefixerBrowsers
+            },
+            core: {
+                options: {
+                    map: true
+                },
+                src: 'dist/css/<%= pkg.name %>.css'
+            }
+        },
+        csscomb: {
+            options: {
+                config: 'src/less/.csscomb.json'
+            },
+            dist: {
+                expand: true,
+                cwd: 'dist/css/',
+                src: ['*.css', '!*.min.css'],
+                dest: 'dist/css/'
+            }
+        },
 
+        // grunt js file
         //concat: {
         //    options: {
         //        separator: ';'
@@ -44,13 +72,13 @@ module.exports = function(grunt) {
                 mangle: false,
                 sourceMap: true
             },
-            main: {
+            core: {
                 files: {
                     'dist/js/app.min.js': ['app/app.js', 'app/**/*.js']
                 }
             }
-        }
-        //
+        },
+
         //copy: {
         //    // Copie images
         //    img: {
@@ -82,6 +110,16 @@ module.exports = function(grunt) {
         //        tasks: ['copy']
         //    }
         //}
+
+        // test
+        csslint: {
+            options: {
+                csslintrc: 'src/less/.csslintrc'
+            },
+            dist: [
+                'dist/css/<%= pkg.name %>.css'
+            ]
+        }
     });
 
     // Load the plugin that provides the "uglify" task.
@@ -89,6 +127,13 @@ module.exports = function(grunt) {
     require('time-grunt')(grunt);
 
     // Default task(s).
-    grunt.registerTask('default', ['clean:dist', 'less:compileCore', 'uglify']);
+    grunt.registerTask('default', [
+        'clean:dist',
+        'less:core',
+        'autoprefixer:core',
+        'uglify:core',
+        'csscomb:dist'
+    ]);
 
+    grunt.registerTask('test', ['csslint:dist']);
 };
