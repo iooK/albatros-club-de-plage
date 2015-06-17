@@ -1,0 +1,5 @@
+#border {
+    .radius(@topleft: 0, @topright: 0, @bottomright: 0, @bottomleft: 0) {
+        #elements > #border.radius(@topright, @bottomright, @bottomleft, @topleft);
+    }
+}
