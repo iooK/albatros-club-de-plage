@@ -8,29 +8,13 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        //less: {
-        //    main: {
-        //        options: {
-        //            //compress: true,
-        //            sourceMap: true,
-        //            sourceMapFilename: "dist/css/bootstrap-theme-custom.css.map",
-        //            sourceMapURL: '/dist/css/bootstrap-theme-custom.css.map'
-        //        },
-        //        // Preprocess css styles
-        //        files: {
-        //            "dist/css/bootstrap-theme-custom.css": "src/less/bootstrap-custom.less"
-        //        }
-        //    }
-        //},
-
         // Empties dist directory
         clean: {
-            dist: 'dist',
-            docs: 'docs/dist'
+            dist: 'dist'
         },
 
         less: {
-            compileCore: {
+            main: {
                 options: {
                     strictMath: true,
                     sourceMap: true,
