@@ -50,7 +50,6 @@
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="bower_components/jquery.stellar/jquery.stellar.min.js"></script>
-        <script src="bower_components/masonry/dist/masonry.pkgd.min.js"></script>
         <!-- integrate js -->
 
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARwOqZ7bqNp6Va9hiyrCxbbCVUyD1Bmxg"></script>
@@ -190,7 +189,6 @@
 				// affichage du tableau de prix 1
 				$('#tarifClubPlage1 a').click(function(e) {
 					e.preventDefault();
-					//var widthDiv = 100*parseFloat($('#tarifClubPlage1').css('width')) / parseFloat($('#tarifClubPlage1').parent().css('width'));
 					$('#tarifClubPlage2').toggle();
                     $('#tarifClubPlage1 .hideMe').toggle(400);
 					$('#tarifClubPlage1').toggleClass('col-sm-6');
@@ -199,11 +197,10 @@
 				// affichage du tableau de prix 2
 				$('#tarifClubPlage2 a').click(function(e) {
 					e.preventDefault();
-					//var widthDiv = 100*parseFloat($('#tarifClubPlage2').css('width')) / parseFloat($('#tarifClubPlage2').parent().css('width'));
 					$('#tarifClubPlage1').toggle();
 					$('#tarifClubPlage2 .hideMe').toggle(400);
                     $('#tarifClubPlage2').toggleClass('col-sm-6');
-					$('#tarifClubPlage2 a').text(($(this).text() == 'Afficher les deux tableaux') ? 'Profiter de tarifs préférentiels' : 'Afficher les deux tableaux');
+					$('#tarifClubPlage2 a').text(($(this).text() == 'Afficher les deux tableaux') ? 'Afficher les tarifs préférentiels' : 'Afficher les deux tableaux');
 				});
 
                 // load google maps

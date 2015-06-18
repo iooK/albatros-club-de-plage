@@ -1,12 +1,13 @@
 .panel {
+    .text-center();
+
     &&-prices {
         #elements > #border.rounded(5px);
         border: 1px solid @blue-dark;
-        .text-center();
 
         > .panel-heading {
             & {
-                #border.radius();
+                #border.radius(4px, 4px, 0, 0);
                 background-color: @blue;
                 padding-top: 50px;
                 padding-bottom: 50px;
@@ -27,9 +28,7 @@
 }
 
 #content-equipe {
-    .panel {
-        .thumbnail {
-            min-height: 512px;
-        }
+    .thumbnail {
+        min-height: 512px;
     }
 }

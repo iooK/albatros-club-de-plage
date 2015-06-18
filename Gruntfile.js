@@ -87,10 +87,15 @@ module.exports = function(grunt) {
         //        src: '**',
         //        dest: 'dist/img/'
         //    },
-        //    // Copie des fonts
-        //    fonts: {
+        //    fontBootstrap: {
         //        expand: true,
-        //        cwd: 'src/fonts/',
+        //        cwd: 'bower_components/fontawesome/fonts/',
+        //        src: '**',
+        //        dest: 'dist/fonts/'
+        //    },
+        //    fontFa: {
+        //        expand: true,
+        //        cwd: 'bower_components/fontawesome/fonts/',
         //        src: '**',
         //        dest: 'dist/fonts/'
         //    }

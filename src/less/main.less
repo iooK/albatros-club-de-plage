@@ -1,11 +1,17 @@
 @import "../../bower_components/bootstrap/less/bootstrap.less";
 @import "../../bower_components/fontawesome/less/font-awesome.less";
 #elements { @import "../../bower_components/elements/elements.less"; }
+
 @import "mixins.less";
 @import "variables.less";
 
+@import "navs.less";
 @import "panels.less";
 @import "tables.less";
+
+body {
+    margin-bottom: 40px;
+}
 
 .page-header {
     & {
@@ -66,10 +72,6 @@ footer {
 
 //////////////////////////////////////////
 
-body {
-    margin-bottom: 40px !important;
-}
-
 .huge-size {
     font-size: 2.5em;
 }
@@ -91,10 +93,6 @@ body {
     text-decoration: underline !important;
 }
 
-.fauxBold {
-    font-weight: bold;
-}
-
 .hideMe {
     .hidden();
 }
@@ -103,31 +101,6 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold !important;
 }
-
-
-// overwrite navigation
-.nav {
-    > li {
-        > a {
-            padding-top: 10px;
-            padding-bottom: 10px;
-            margin-top: 5px;
-            margin-bottom: 5px;
-            color: #0088CC !important;
-            #elements > #border.rounded(5px);
-        }
-        > a:hover, > a:focus {
-            background-color: #EEEEEE !important;
-        }
-    }
-    > li.active {
-        > a {
-            background-color: #0088CC !important;
-            color: #FFFFFF !important;
-        }
-    }
-}
-
 
 .text-shadow-1 {
     #elements > #shadow.text(~"0 2px 0 black, 1px 0 20px black, 0 1px 20px black");
@@ -272,79 +245,4 @@ article {
     h3 {
         text-decoration: underline;
     }
-    // colonne
-    h4.well {
-        margin-top: 0;
-    }
-}
-
-// overwrite class thumbnails
-ul.thumbnails li div.thumbnail {
-    background-color: white !important;
-    img.img-thumbnail {
-        border-radius: 0;
-    }
-}
-
-#content-partenariat {
-    .thumbnails {
-        .thumbnail {
-            //height: 382px;
-            img {
-                width: 100%;
-                padding: 40px;
-                max-width: 300px;
-            }
-        }
-    }
-}
-
-#content-equipe {
-    .panel {
-        img {
-            width: 128px;
-            height: 128px;
-            max-width: none;
-        }
-    }
-}
-
-// equivalence col-sm*
-@media (min-width: 768px) and (max-width: 991px) {
-    #content-equipe {
-        .panel {
-            height: 248px;
-        }
-    }
-}
-
-// equivalence col-md
-@media (min-width: 992px) and (max-width: 1199px) {
-    #content-equipe {
-        .panel {
-            height: 326px;
-        }
-    }
-}
-
-// equivalence col-lg
-@media (min-width: 1200px) {
-    #content-equipe {
-        .panel {
-            height: 225px;
-        }
-    }
-}
-
-/* main class */
-.logo-facebook span {
-    background-image: url("/img/logo-facebook.png");
-    background-repeat: no-repeat;
-    background-position: center right;
-    padding-right: 20px;
-}
-
-.well-blue {
-    background-color: #D4EBF7;
-    border-color: #95cae5;
 }
