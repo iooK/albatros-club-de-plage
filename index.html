@@ -29,7 +29,7 @@
         <!-- integrate css -->
 
 	</head>
-	<body data-spy="scroll" data-target=".navbar">
+	<body data-spy="scroll" data-target=".navbar" ng-controller="MainController">
 
         <div ui-view="navigation"></div>
         <div ui-view="club-plage.cover"></div>
@@ -47,12 +47,13 @@
         <!-- integrate js -->
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="http://maps.google.com/maps/api/js?key=AIzaSyARwOqZ7bqNp6Va9hiyrCxbbCVUyD1Bmxg"></script>
+        <script src="bower_components/ngmap/build/scripts/ng-map.min.js"></script>
+
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
-		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="bower_components/jquery.stellar/jquery.stellar.min.js"></script>
         <!-- integrate js -->
-
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARwOqZ7bqNp6Va9hiyrCxbbCVUyD1Bmxg"></script>
 
         <script src="dist/js/app.min.js"></script>
 
@@ -80,92 +81,51 @@
                 return navigator.geolocation;
             };
 
-            calcMapRoute = function(type) {
-                if (!isDeviceGeoloc()) {
-                    gInfoWindow.setContent(contentError);
-                    return false;
-                }
-                gTravelMode = (type == 'foot')?google.maps.TravelMode.WALKING:( (type == 'car')?google.maps.TravelMode.DRIVING:google.maps.TravelMode.BICYCLING )
-                //récupération de la position
-                navigator.geolocation.getCurrentPosition(
-                    // ok
-                    function(position) {
-                        //new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
-                          var request = {
-                            origin:new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
-                            destination:gPositionAlbatros,
-                            travelMode: gTravelMode
-                        };
-                        gDirectionsService.route(request , function(response, status) {
-                            if (status == google.maps.DirectionsStatus.OK) {
-                                gDirectionsDisplay.setMap(gMap);  // ajout de la route sur la map
-                                gDirectionsDisplay.setDirections(response);
+//            calcMapRoute = function(type) {
+//                if (!isDeviceGeoloc()) {
+//                    gInfoWindow.setContent(contentError);
+//                    return false;
+//                }
+//                gTravelMode = (type == 'foot')?google.maps.TravelMode.WALKING:( (type == 'car')?google.maps.TravelMode.DRIVING:google.maps.TravelMode.BICYCLING )
+//                //récupération de la position
+//                navigator.geolocation.getCurrentPosition(
+//                    // ok
+//                    function(position) {
+//                        //new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
+//                          var request = {
+//                            origin:new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+//                            destination:gPositionAlbatros,
+//                            travelMode: gTravelMode
+//                        };
+//                        gDirectionsService.route(request , function(response, status) {
+//                            if (status == google.maps.DirectionsStatus.OK) {
+//                                gDirectionsDisplay.setMap(gMap);  // ajout de la route sur la map
+//                                gDirectionsDisplay.setDirections(response);
+//
+//                            }
+//                        });
+//                    },
+//                    // error
+//                    function(error) {
+//                        gInfoWindow.setContent(error);
+//                    },
+//                    {enableHighAccuracy:true}
+//                );
+//            }
 
-                            }
-                        });
-                    },
-                    // error
-                    function(error) {
-                        gInfoWindow.setContent(error);
-                    },
-                    {enableHighAccuracy:true}
-                );
-            }
-
-            // init google maps
-            initializeGoogleMaps = function() {
-
-                // création de la route
-                gDirectionsDisplay = new google.maps.DirectionsRenderer();
-
-                // création de la map
-                gMap = new google.maps.Map(document.getElementById("map-canvas"), {
-                    center: new google.maps.LatLng(47.48052, -3.12050),
-                    zoom: 16
-                });
-                // création du marker
-                gMarker = new google.maps.Marker({
-                    position: gPositionAlbatros,
-                    icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
-                    map: gMap,
-                    title: "Club de Plage Albatros"
-                });
-                // création de la fenetre
-                gInfoWindow = new google.maps.InfoWindow({
-                  content: '<div class="infoWindow" style="width: 200px;">'+
-                    '<h4 class="text-center">Nous rejoindre</h4>'+
-                    '<p class="text-center">'+
-                    '<button id="calcMapFoot" class="btn btn-primary btn-xs">A pied</button>&nbsp;'+
-                    '<button id="calcMapBicycle" class="btn btn-primary btn-xs">A vélo</button>&nbsp;'+
-                    '<button id="calcMapCar" class="btn btn-primary btn-xs">En voiture</button>&nbsp;'+
-                    '</p></div>'
-                });
-                gInfoWindow.open(gMap, gMarker);
-                google.maps.event.addListener(gMarker, 'click', function() {
-                    gInfoWindow.open(gMap,gMarker);
-                });
-                google.maps.event.addListener(gInfoWindow, 'domready', function() {
-                    $('#calcMapFoot').on('click', function() {
-                        calcMapRoute('foot');
-                    });
-                    $('#calcMapBicycle').on('click', function() {
-                        calcMapRoute('bicycle');
-                    });
-                    $('#calcMapCar').on('click', function() {
-                        calcMapRoute('car');
-                    });
-                });
-
-            };
+//            // init google maps
+//
+//
+//            };
 
 			//////////////////////// start script ////////////////////////
 
-			!function ($) {
+			!function (jquery) {
 
                 // pour les versions non mobile
 				if (!isDeviceTouch()) {
 					// démarrage de stellar
-					$.stellar({
+                    jquery.stellar({
 						horizontalScrolling: false,
 						verticalScrolling: true,
 						responsive: false
@@ -174,7 +134,7 @@
 				}
 
                 // scrolling tout en souplesse
-                $('.slowMotion').bind('click', function(e) {
+                jquery('.slowMotion').bind('click', function(e) {
                     e.preventDefault();
                     var $this = $(this),
                             target = this.hash,
@@ -186,25 +146,8 @@
                     );
                 });
 
-				// affichage du tableau de prix 1
-				$('#tarifClubPlage1 a').click(function(e) {
-					e.preventDefault();
-					$('#tarifClubPlage2').toggle();
-                    $('#tarifClubPlage1 .hideMe').toggle(400);
-					$('#tarifClubPlage1').toggleClass('col-sm-6');
-					$('#tarifClubPlage1 a').text(($(this).text() == 'Afficher les deux tableaux') ? 'Afficher les tarifs préférentiels' : 'Afficher les deux tableaux');
-				});
-				// affichage du tableau de prix 2
-				$('#tarifClubPlage2 a').click(function(e) {
-					e.preventDefault();
-					$('#tarifClubPlage1').toggle();
-					$('#tarifClubPlage2 .hideMe').toggle(400);
-                    $('#tarifClubPlage2').toggleClass('col-sm-6');
-					$('#tarifClubPlage2 a').text(($(this).text() == 'Afficher les deux tableaux') ? 'Afficher les tarifs préférentiels' : 'Afficher les deux tableaux');
-				});
-
                 // load google maps
-                initializeGoogleMaps();
+//                initializeGoogleMaps();
 
 			}(window.jQuery)
 		</script>

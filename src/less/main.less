@@ -69,6 +69,21 @@ footer {
     }
 }
 
+#content-equipe {
+    .thumbnail {
+        min-height: 512px;
+    }
+}
+#content-partenariat {
+    img {
+        max-width: 100%;
+    }
+}
+#tarifClubPlage1,
+#tarifClubPlage2 {
+    #elements > #transition.all();
+}
+
 
 //////////////////////////////////////////
 
@@ -84,15 +99,6 @@ footer {
     font-size: 0.8em;
 }
 
-.text-nounderline,
-.no-underline {
-    text-decoration: none !important;
-}
-
-.underline {
-    text-decoration: underline !important;
-}
-
 .hideMe {
     .hidden();
 }
@@ -102,14 +108,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold !important;
 }
 
-.text-shadow-1 {
-    #elements > #shadow.text(~"0 2px 0 black, 1px 0 20px black, 0 1px 20px black");
-}
-
-.text-shadow-2 {
-    #elements > #shadow.text(~"0 2px 0 black, 1px 0 10px black, 0 1px 10px black, -1px 0 10px black, 0 -1px 10px black");
-}
-
 .img-stellar {
     background-size: cover;
     background-attachment: scroll;
@@ -117,9 +115,7 @@ h1, h2, h3, h4, h5, h6 {
     background-repeat: no-repeat;
     height: 550px;
     position: relative;
-}
 
-.img-stellar {
     span {
         display: block;
         font-size: 38px;
@@ -213,24 +209,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-
-// section
-//section.content {
-//    padding: 0 10px;
-//    > header, > footer {
-//        margin: 30px auto !important; // override class page-header
-//    }
-//    > header {
-//        text-align: center;
-//        padding-bottom: 0px !important; // override class page-header
-//        > h1 {
-//            color: #0088CC;
-//            padding-top: 50px;
-//            margin-top: -50px;
-//        }
-//    }
-//
-//}
 
 #content-equipe,
 #content-partenariat {

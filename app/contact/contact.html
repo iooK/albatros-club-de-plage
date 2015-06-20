@@ -4,7 +4,7 @@
     </header>
     <article>
         <div class="row">
-            <div class="col-lg-4 col-md-6 col-md-6 col-lg-offset-1 col-md-offset-0 col-md-offset-0 col-md-offset-0">
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-0 col-sm-offset-0 col-xs-offset-0">
                 <address itemscope itemtype="http://schema.org/Organization">
                     <h3><i class="fa fa-envelope-square"></i><span class="invisible"> </span><strong itemprop="name">Albatros Club de Plage</strong></h3>
                     <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
@@ -16,19 +16,49 @@
                     <i class="fa fa-phone-square"></i> Juillet: <span itemprop="telephone">(33 6) 61 34 18 64 </span><br>
                     <i class="fa fa-phone-square"></i> Août: <span itemprop="telephone">(33 6) 31 23 39 13 </span>
                 </address>
-                <div class="embed-responsive  embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FAlbatrosClubdeplage&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe>
-                </div>
+                <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FAlbatrosClubdeplage&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe>
             </div>
-            <div class="col-lg-6 col-md-6 col-md-6 col-lg-offset-1 col-md-offset-6 col-md-offset-6 col-md-offset-6">
+            <div class="col-lg-6 col-md-6 col-md-6 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-0 col-sm-offset-0 col-xs-offset-0">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <div id="map-canvas" class="embed-responsive-item"></div>
+
+                    <map class="embed-responsive-item"
+                         center="[47.48052, -3.12050]"
+                         disable-default-u-i="false"
+                         draggable="true"
+                         dragging-cursor="move"
+                         keyboard-shortcuts="false"
+                         zoom="16"
+                         map-type-id="ROADMAP">
+
+                        <marker
+                                id="foo"
+                                position="[47.47954, -3.12005]"
+                                title="Club de Plage Albatros"
+                                draggable="false"
+                                visible="true"
+                                icon="http://maps.google.com/mapfiles/ms/icons/blue-dot.png">
+                        </marker>
+                        <info-window id="bar" visible-on-marker="foo">
+                            <div ng-non-bindable="">
+                                <div id="siteNotice"></div>
+                                <h4 class="text-center">Nous rejoindre</h4>
+                                <div id="bodyContent">
+                                    <p class="text-center">
+                                        <button id="calcMapFoot" class="btn btn-primary btn-xs">A pied</button>&nbsp;
+                                        <button id="calcMapBicycle" class="btn btn-primary btn-xs">A vélo</button>&nbsp;
+                                        <button id="calcMapCar" class="btn btn-primary btn-xs">En voiture</button>&nbsp;
+                                    </p>
+                                </div>
+                            </div>
+                        </info-window>
+                    </map>
+
                 </div>
             </div>
         </div>
     </article>
 
     <footer class="text-center">
-        <a href="#partenariat" class="slowMotion"><i class="fa fa-arrow-circle-down  "></i><span class="sr-only">Partenariat</span></a>
+        <a href="#partenariat" target="_self" class="slowMotion"><i class="fa fa-arrow-circle-down  "></i><span class="sr-only">Partenariat</span></a>
     </footer>
 </section>

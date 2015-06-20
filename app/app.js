@@ -2,6 +2,7 @@
     'use strict';
 
     angular.module('webApp', [
-        'ui.router'
+        'ui.router',
+        'ngMap'
     ]);
 })();
