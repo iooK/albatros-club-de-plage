@@ -58,20 +58,6 @@
         <script src="dist/js/app.min.js"></script>
 
 		<script>
-
-            var gMap,
-                gMarker,
-                gDirectionsDisplay,
-                gInfoWindow,
-                gDirectionsService = new google.maps.DirectionsService(),
-                gPositionAlbatros = new google.maps.LatLng(47.47954,-3.12005),
-                contentError= '<div class="infoWindow" style="width: 200px;">'+
-                            '<h4 class="text-center">Nous rejoindre</h4>'+
-                            '<p class="text-center">'+
-                            'Nous sommes dans l\'incapacité de trouver votre position'+
-                            '</p></div>';
-
-
 			// fonction de détection des appareils mobiles
 			isDeviceTouch = function() {
 			  return !!('ontouchstart' in document.documentElement) // works on most browsers
@@ -145,10 +131,6 @@
                             'swing'
                     );
                 });
-
-                // load google maps
-//                initializeGoogleMaps();
-
 			}(window.jQuery)
 		</script>
 
