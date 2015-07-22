@@ -5,14 +5,11 @@ api_version: 1
 threadsafe: yes
 
 handlers:
-- url: /
-  script: web/index.html
-
 - url: /dist
   static_dir: web/dist
 
 - url: /robots.txt
   script: web/robots.txt
 
-- url: /
-  script: index.html
+- url: /.*
+  script: web/index.html
