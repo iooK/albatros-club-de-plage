@@ -14,25 +14,25 @@
             .state('home', {
                 url: "/",
                 views: {
-                    "navigation": {templateUrl: "/app/navigation/navigation.html"},
+                    "navigation": {templateUrl: "/dist/app/navigation/navigation.html"},
 
-                    "club-plage.cover": {templateUrl: "/app/club-plage/club-plage.cover.html"},
-                    "club-plage": {templateUrl: "/app/club-plage/club-plage.html"},
+                    "club-plage.cover": {templateUrl: "/dist/app/club-plage/club-plage.cover.html"},
+                    "club-plage": {templateUrl: "/dist/app/club-plage/club-plage.html"},
 
-                    "ecole-natation.cover": {templateUrl: "/app/ecole-natation/ecole-natation.cover.html"},
-                    "ecole-natation": {templateUrl: "/app/ecole-natation/ecole-natation.html"},
+                    "ecole-natation.cover": {templateUrl: "/dist/app/ecole-natation/ecole-natation.cover.html"},
+                    "ecole-natation": {templateUrl: "/dist/app/ecole-natation/ecole-natation.html"},
 
-                    "remise-forme.cover": {templateUrl: "/app/remise-forme/remise-forme.cover.html"},
-                    "remise-forme": {templateUrl: "/app/remise-forme/remise-forme.html"},
+                    "remise-forme.cover": {templateUrl: "/dist/app/remise-forme/remise-forme.cover.html"},
+                    "remise-forme": {templateUrl: "/dist/app/remise-forme/remise-forme.html"},
 
-                    "stand-up-paddle.cover": {templateUrl: "/app/stand-up-paddle/stand-up-paddle.cover.html"},
-                    "stand-up-paddle": {templateUrl: "/app/stand-up-paddle/stand-up-paddle.html"},
+                    "stand-up-paddle.cover": {templateUrl: "/dist/app/stand-up-paddle/stand-up-paddle.cover.html"},
+                    "stand-up-paddle": {templateUrl: "/dist/app/stand-up-paddle/stand-up-paddle.html"},
 
-                    "equipe": {templateUrl: "/app/equipe/equipe.html"},
+                    "equipe": {templateUrl: "/dist/app/equipe/equipe.html"},
 
-                    "contact": {templateUrl: "/app/contact/contact.html"},
+                    "contact": {templateUrl: "/dist/app/contact/contact.html"},
 
-                    "partenaire": {templateUrl: "/app/partenaire/partenaire.html"}
+                    "partenaire": {templateUrl: "/dist/app/partenaire/partenaire.html"}
                 }
             });
     }

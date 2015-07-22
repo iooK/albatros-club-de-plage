@@ -77,7 +77,7 @@ gulp.task('copy_other', function() {
 
 // compile angular application
 gulp.task('app', function() {
-    return gulp.src(__dirname + '/src/app/**/*.js')
+    return gulp.src([__dirname + '/src/app/app.js', __dirname + '/src/app/**/*.js'])
         .pipe((util.env.type === 'dev') ? sourcemaps.init() : util.noop())
         .pipe(concat('app.js'))
         .pipe((util.env.type !== 'dev') ? uglify() : util.noop())
