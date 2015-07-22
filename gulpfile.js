@@ -3,7 +3,6 @@ var gulp  = require('gulp');
 
 var autoprefixer    = require('gulp-autoprefixer');
 var concat          = require('gulp-concat');
-var connect         = require('gulp-connect');
 var extend          = require('gulp-extend');
 var header          = require('gulp-header');
 var less            = require('gulp-less');
@@ -121,13 +120,4 @@ gulp.task('default', ['less', 'app', 'lib', 'copy_app', 'copy_other'], function 
 
     util.log('Watching for JS lib');
     gulp.watch(__dirname + "/src/js/**/*.js", ['lib']);
-});
-
-// connect local server
-gulp.task('connect', function() {
-    connect.server({
-        root: 'web',
-        port: 8080,
-        fallback: 'web/index.html'
-    });
 });
