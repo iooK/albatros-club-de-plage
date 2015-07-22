@@ -4,6 +4,10 @@ runtime: php55
 api_version: 1
 threadsafe: yes
 
+skip_files:
+- ^.git/*$
+- ^.idea/*$
+
 handlers:
 - url: /dist
   static_dir: web/dist
