@@ -9,7 +9,7 @@ handlers:
   static_files: app/\1
   upload: app/.*
 
-- url: /bower_components/(.*)
+- url: /web/bower_components/(.*)
   static_files: bower_components/\1
   upload: bower_components/.*
 
@@ -17,8 +17,8 @@ handlers:
   static_files: dist/\1
   upload: dist/.*
 
-- url: /icons/(.*)
-  static_files: icons/\1
+- url: /icon/(.*)
+  static_files: icon/\1
   upload: icons/.*
 
 - url: /img/(.*)
