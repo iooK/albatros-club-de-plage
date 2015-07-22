@@ -8,6 +8,9 @@ handlers:
 - url: /dist
   static_dir: web/dist
 
+- url: /bower_components
+  static_dir: web/bower_components
+
 - url: /robots.txt
   script: web/robots.txt
 
