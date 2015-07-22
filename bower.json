@@ -1,14 +1,28 @@
 {
-  "name": "albatros",
-  "version": "0.0.1",
+  "name": "albatros-club-de-plage",
+  "version": "1.0.0",
   "dependencies": {
-    "bootstrap": "~3.3.5",
     "elements": "git@github.com:Oreolek/elements.git",
-    "fontawesome": "~4.3.0",
-    "angular": "~1.4.1",
-    "jquery.stellar": "~0.6.2",
-    "angular-ui-router": "~0.2.15",
-    "ngmap": "~1.7.11"
+    "fontawesome": "^4.3.0",
+    "angular": "^1.4.1",
+    "jquery.stellar": "^0.6.2",
+    "angular-ui-router": "^0.2.15",
+    "ngmap": "^1.7.11",
+    "bootstrap": "^3.3.5"
   },
-  "devDependencies": {}
+  "homepage": "http://albatros-club-de-plage.fr",
+  "authors": [
+    "Kevin Lot <mail@kevinlot.me>"
+  ],
+  "description": "Website of Albatros Club de Plage",
+  "main": "web/index.html",
+  "license": "GPL-2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "web/bower_components",
+    "test",
+    "tests"
+  ]
 }

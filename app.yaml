@@ -5,29 +5,14 @@ api_version: 1
 threadsafe: yes
 
 handlers:
-- url: /app/(.*)
-  static_files: app/\1
-  upload: app/.*
+- url: /dist
+  static_dir: web/dist
 
-- url: /bower_components/(.*)
-  static_files: bower_components/\1
-  upload: bower_components/.*
-
-- url: /dist/(.*)
-  static_files: dist/\1
-  upload: dist/.*
-
-- url: /icons/(.*)
-  static_files: icons/\1
-  upload: icons/.*
-
-- url: /img/(.*)
-  static_files: img/\1
-  upload: img/.*
+- url: /bower_components
+  static_dir: web/bower_components
 
 - url: /robots.txt
-  static_files: robots.txt
-  upload: robots.txt
+  script: web/robots.txt
 
-- url: /
-  script: index.html
+- url: /.*
+  script: web/index.html

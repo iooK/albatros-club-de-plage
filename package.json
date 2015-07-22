@@ -1,23 +1,37 @@
 {
-  "name": "albatros",
-  "version": "0.0.1",
-  "dependencies": {
-    "connect": "~3.3.5",
-    "serve-static": "~1.9.3"
-  },
+  "name": "albatros-club-de-plage",
+  "version": "1.0.0",
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-autoprefixer": "~3.0.3",
-    "grunt-contrib-clean": "~0.6.0",
-    "grunt-contrib-concat": "~0.5.1",
-    "grunt-contrib-copy": "~0.8.0",
-    "grunt-contrib-csslint": "~0.4.0",
-    "grunt-contrib-less": "~1.0.1",
-    "grunt-contrib-uglify": "~0.9.1",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-csscomb": "~3.0.1",
-    "grunt-wiredep": "~2.0.0",
-    "load-grunt-tasks": "~3.2.0",
-    "time-grunt": "~1.2.1"
-  }
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-extend": "^0.2.0",
+    "gulp-header": "^1.2.2",
+    "gulp-less": "^3.0.3",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.6"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "description": "Website of Albatros Club de Plage",
+  "main": "web/index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iooK/albatros-club-de-plage.git"
+  },
+  "author": {
+    "name": "Kevin Lot",
+    "email": "mail@kevinlot.me",
+    "url": "kevinlot.me"
+  },
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/iooK/albatros-club-de-plage/issues"
+  },
+  "homepage": "http://albatros-club-de-plage.fr"
 }
