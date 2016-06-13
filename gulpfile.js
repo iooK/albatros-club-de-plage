@@ -3,10 +3,11 @@ var gulp  = require('gulp');
 
 var autoprefixer    = require('gulp-autoprefixer');
 var concat          = require('gulp-concat');
+var connect         = require('gulp-connect');
 var extend          = require('gulp-extend');
 var header          = require('gulp-header');
 var less            = require('gulp-less');
-var minifyCSS       = require('gulp-minify-css');
+var cleanCss        = require('gulp-clean-css');
 //var ngConstant    = require('gulp-ng-constant');
 var rename          = require('gulp-rename');
 var sourcemaps      = require('gulp-sourcemaps');
@@ -17,7 +18,7 @@ var util            = require('gulp-util');
 util.env.type = (util.env.type === undefined) ? 'dev' : util.env.type;
 util.log('Environment: ' + util.env.type + ' (you can change with --type=(dev|prod|...) parameter)');
 
-var bower = require(__dirname + '/bower.json');
+var bower = require('./bower.json');
 var banner = ['/**',
     ' * <%= bower.name %> - <%= bower.description %>',
     ' * @version v<%= bower.version %>',
@@ -27,39 +28,45 @@ var banner = ['/**',
     ''].join('\n');
 
 // compile less
-gulp.task('less', function() {
-    return gulp.src(__dirname + '/src/less/main.less')
+gulp.task('less', function(done) {
+    gulp
+        .src('./src/less/main.less')
         .pipe((util.env.type === 'dev') ? sourcemaps.init() : util.noop())
         .pipe(less())                                                           // paths: [path.join(__dirname)]
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
         }))
+        .pipe(cleanCss())
         .pipe((util.env.type === 'dev') ? sourcemaps.write() : util.noop())
-        .pipe((util.env.type !== 'dev') ? minifyCSS() : util.noop())
         .pipe(rename(bower.name + '.css'))
-        .pipe(gulp.dest(__dirname + '/web/dist/css'));
+        .pipe(gulp.dest(__dirname + '/web/dist/css'))
+        .on('end', done);
 });
 
-gulp.task('copy_app', function() {
-    return gulp.src([
+gulp.task('copy_app', function(done) {
+    gulp
+        .src([
             __dirname + '/src/app/**/*.html',
             __dirname + '/src/app/**/*.json'
         ], {
-            'base' : __dirname + '/src/app'
+            'base' : './src/app'
         })
-        .pipe(gulp.dest(__dirname + '/web/dist/app'));
+        .pipe(gulp.dest('./web/dist/app'))
+        .on('end', done);
 });
 
-gulp.task('copy_other', function() {
-    return gulp.src([
-            __dirname + '/src/font/**/*',
-            __dirname + '/src/icon/**/*',
-            __dirname + '/src/img/**/*'
+gulp.task('copy_other', function(done) {
+    gulp
+        .src([
+            './src/font/**/*',
+            './src/icon/**/*',
+            './src/img/**/*'
         ], {
-            'base' : __dirname + '/src'
+            'base': './src'
         })
-        .pipe(gulp.dest(__dirname + '/web/dist'));
+        .pipe(gulp.dest('./web/dist'))
+        .on('end', done);
 });
 
 // make configuration
@@ -76,48 +83,58 @@ gulp.task('copy_other', function() {
 
 // compile angular application
 gulp.task('app', function() {
-    return gulp.src([__dirname + '/src/app/app.js', __dirname + '/src/app/**/*.js'])
+    return gulp.src(['./src/app/app.js', './src/app/**/*.js', './src/js/**/*.js'])
         .pipe((util.env.type === 'dev') ? sourcemaps.init() : util.noop())
         .pipe(concat('app.js'))
-        .pipe((util.env.type !== 'dev') ? uglify() : util.noop())
+        .pipe(uglify())
         .pipe((util.env.type === 'dev') ? sourcemaps.write() : util.noop())
-        .pipe(header(banner, { bower : bower } ))
-        .pipe(gulp.dest(__dirname + '/web/dist/js'));
+        .pipe(header(banner, {bower: bower } ))
+        .pipe(gulp.dest('./web/dist/js'));
 });
 
 
 // compile js libraries
-gulp.task('lib', function() {
-    return gulp.src(__dirname + '/src/js/**/*.js')
-        .pipe(concat('app.lib.js'))
-        .pipe(gulp.dest(__dirname + '/web/dist/js'));
-});
+// gulp.task('lib', function() {
+//     return gulp.src('./src/js/**/*.js')
+//         .pipe(concat('app.lib.js'))
+//         .pipe(gulp.dest(__dirname + '/web/dist/js'));
+// });
 
 // default task
-gulp.task('default', ['less', 'app', 'lib', 'copy_app', 'copy_other'], function () {
+gulp.task('default', ['less', 'app', 'copy_app', 'copy_other'], function () {
 
-    util.log('Watching for files in app for copy');
     gulp.watch([
-        __dirname + '/src/app/**/*.html',
-        __dirname + '/src/app/**/*.json'
+        './src/app/**/*.html',
+        './src/app/**/*.json'
     ], ['copy_app']);
 
     //util.log('Watching for files in parameters for constant');
     //gulp.watch(['./config/**/parameters.json'], ['constant']);
 
-    util.log('Watching for other files in app for copy');
     gulp.watch([
-        __dirname + '/src/font/**/*',
-        __dirname + '/src/icon/**/*',
-        __dirname + '/src/img/**/*'
+        './src/font/**/*',
+        './src/icon/**/*',
+        './src/img/**/*'
     ], ['copy_other']);
 
-    util.log('Watching for Less');
-    gulp.watch(__dirname + "/src/less/**/*.less", ['less']);
+    gulp.watch([
+        './src/less/**/*.less'
+    ], ['less']);
 
-    util.log('Watching for JS app');
-    gulp.watch(__dirname + "/src/app/**/*.js", ['app']);
+    gulp.watch('./src/app/**/*.js', [
+        'app'
+    ]);
 
-    util.log('Watching for JS lib');
-    gulp.watch(__dirname + "/src/js/**/*.js", ['lib']);
+    // gulp.watch('./src/js/**/*.js', [
+    //     'lib'
+    // ]);
+});
+
+// connect local server
+gulp.task('connect', function() {
+    connect.server({
+        root: 'web',
+        port: 9000,
+        fallback: 'index.html'
+    });
 });
