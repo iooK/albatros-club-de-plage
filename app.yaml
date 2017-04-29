@@ -5,6 +5,7 @@ threadsafe: yes
 skip_files:
 - ^.git/*$
 - ^.idea/*$
+- ^node_modules/*$
 
 handlers:
 - url: /dist
