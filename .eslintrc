@@ -1,0 +1,25 @@
+{
+    "plugins": ["angular"],
+    "extends": ["eslint:recommended"],
+    "globals": {
+        "__dirname": true,
+        "angular": true,
+        "require": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 5
+    },
+    "rules": {
+        "angular/controller-as-vm": ["error", "$this"],
+        "comma-style": ["error"],
+        "comma-dangle": ["error", "always-multiline"],
+        "comma-spacing": ["error", { "before": false, "after": true }],
+        "indent": ["error", 4, { "SwitchCase": 1 }],
+        "newline-before-return": ["error"],
+        "no-undefined": ["error"],
+        "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
+        "quote-props": ["error", "always"],
+        "valid-jsdoc": ["error", { "prefer": { "return": "returns" }, "requireParamDescription": false, "requireReturnDescription": false }],
+        "space-before-function-paren": ["error", { "anonymous": "always", "named": "never" }]
+    }
+}
