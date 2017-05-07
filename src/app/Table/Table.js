@@ -78,6 +78,10 @@ export default class Table extends Component {
         const body = [];
         const header = [];
 
+        if (this.props.data.length === 0) {
+            return <span />;
+        }
+
         this.props.data.forEach((row, index) => {
             if (index === 0 && this.props.withRowHeader === true) {
                 header.push(<TableRow key={index} row={row} isHeader={true} />);
