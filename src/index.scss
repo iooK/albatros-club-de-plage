@@ -1,0 +1,75 @@
+@import "./variables";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/font-awesome/scss/font-awesome";
+
+@import "./app/BeachClub/BeachClub";
+@import "./app/Fitness/Fitness";
+@import "./app/Partner/Partner";
+@import "./app/StandUpPaddle/StandUpPaddle";
+@import "./app/SwimmingSchool/SwimmingSchool";
+@import "./app/Team/Team";
+
+section {
+    footer {
+        font-size: $font-size-h1;
+        margin: 0 20px 20px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        border-bottom: 1px solid $brand-primary;
+        color: $brand-primary;
+        margin: 0 20px 20px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h2 {
+        text-decoration: underline;
+    }
+
+    .parallax {
+        background: no-repeat fixed center;
+        background-size: cover;
+        height: 550px;
+        position: relative;
+
+        span {
+            color: $white;
+            display: block;
+            font-size: $font-size-h1;
+            line-height: $font-size-h1;
+            margin: 20px;
+            text-shadow: 0 2px 0 $real-black, 1px 0 10px $real-black, 0 1px 10px $real-black, -1px 0 10px $real-black, 0 -1px 10px $real-black;
+        }
+    }
+}
+
+span.fa-arrow-right {
+    line-height: $font-size-base;
+    vertical-align: middle;
+    font-size: 0.55rem;
+}
+
+.facebook {
+    .navbar-light .navbar-nav &.nav-link {
+        color: #3b5998;
+    }
+}
+
+.page-header {
+    margin: ($page-header-margin * 2) 0 $page-header-margin;
+    border-bottom: 1px solid $page-header-border-color;
+    text-align: center;
+
+    &.page-header-pb-1 {
+        padding-bottom: (($page-header-margin * 3) + 2);
+    }
+}
+
+.table.text-center {
+    thead th {
+        text-align: center;
+    }
+}

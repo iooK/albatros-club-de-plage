@@ -1,0 +1,45 @@
+//
+// Variables
+// --------------------------------------------------
+
+// Albatros definitions
+$black:                       #180203;
+$blue:                        #08c;
+$deep-blue:                   #005580;
+$light-blue:                  #d4ebf7;
+$light-gray:                  #f5f5f5;
+$real-black:                  #000;
+$white:                       #fff;
+
+$page-header-margin:          10px;
+$page-header-border-color:    $light-blue;
+
+// Font Awesome
+$fa-font-path:                "../node_modules/font-awesome/fonts";
+
+// Bootstrap
+$body-color:                  $black;
+$brand-primary:               $blue;
+$hr-border-color:             $light-blue;
+$link-hover-color:            $deep-blue;
+
+$font-size-base:              0.875rem;
+
+$headings-font-weight:        700;
+$font-size-h1:                2.25rem;
+$font-size-h2:                1.5rem;
+$font-size-h3:                1.25rem;
+
+$modal-backdrop-bg:           $real-black;
+
+$navbar-light-color:          $blue;
+$navbar-light-hover-color:    $deep-blue;
+
+$btn-secondary-color:         $blue;
+$btn-secondary-bg:            $white;
+$btn-secondary-border:        $light-blue;
+
+$table-bg-accent:             $light-blue;
+$table-bg-hover:              $light-blue;
+$table-border-width:          0;
+$table-head-bg:               $blue;
