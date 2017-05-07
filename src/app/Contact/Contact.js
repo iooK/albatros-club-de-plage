@@ -64,7 +64,7 @@ export default class Contact extends Component {
 
                 <Container>
                     <Row tag="article">
-                        <Col xs="12" sm="12" md="6" lg="6">
+                        <Col xs="12" sm="12" md="6" lg="6" xl="6">
                             <address itemScope
                                      itemType="http://schema.org/Organization">
                                 <h2>
@@ -98,7 +98,7 @@ export default class Contact extends Component {
                                     style={{'height': '80px', 'overflow': 'hidden', 'width': '100%', 'border': 'none'}}/>
                         </Col>
 
-                        <Col xs="12" sm="12" md="6" lg="6">
+                        <Col xs="12" sm="12" md="6" lg="6" xl="6">
                             <Map center={Contact.mapProperties.center}
                                  containerElement={
                                     <div style={{ 'height': '400px' }} />

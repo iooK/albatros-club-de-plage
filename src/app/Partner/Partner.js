@@ -9,7 +9,7 @@ class PartnerCol extends Component {
     render() {
         return (
             <Col className="mb-3"
-                 xs="12" sm="6" md="4" lg="3">
+                 xs="12" sm="6" md="4" lg="3" xl="3">
                 <Card>
                     <CardHeader className="text-center">
                         <CardTitle itemProp="name"

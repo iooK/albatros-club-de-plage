@@ -63,26 +63,28 @@ export default class BeachClub extends Component {
                 <Container>
                     <Row>
                         <Col tag="article"
-                             xs="12" sm="12" md="6" lg="6">
-                            <p>
-                                Le Mini Club Albatros et l'Albatros Sportif accueillent les enfants de 3 à 12 ans pour des animations ludiques et encadrées.
-                            </p>
+                             xs="12" sm="12" md="6" lg="6" xl="6">
+                            <div className="columns">
+                                <p>
+                                    Le Mini Club Albatros et l'Albatros Sportif accueillent les enfants de 3 à 12 ans pour des animations ludiques et encadrées.
+                                </p>
 
-                            <h2>Mini Club Albatros</h2>
+                                <h2>Mini Club Albatros</h2>
 
-                            <p>
-                                Pour les plus petits de 3 à 6 ans, le Mini Club Albatros ouvre l'esprit des petits et les éveille grâce à des activités ludiques. Encadrée par une équipe qualifiée et compétente.
-                            </p>
+                                <p>
+                                    Pour les plus petits de 3 à 6 ans, le Mini Club Albatros ouvre l'esprit des petits et les éveille grâce à des activités ludiques. Encadrée par une équipe qualifiée et compétente.
+                                </p>
 
-                            <h2>Albatros Sportif</h2>
+                                <h2>Albatros Sportif</h2>
 
-                            <p>
-                                Pour les plus grands de 7 à 12 ans, le caractère sportif est ici plus poussé. Pour un épanouissement total et la découverte de sports pendant les vacances.
-                            </p>
+                                <p>
+                                    Pour les plus grands de 7 à 12 ans, le caractère sportif est ici plus poussé. Pour un épanouissement total et la découverte de sports pendant les vacances.
+                                </p>
+                            </div>
                         </Col>
 
                         <Col tag="article"
-                             xs="12" sm="12" md="6" lg="6">
+                             xs="12" sm="12" md="6" lg="6" xl="6">
                             <div className="page-header">
                                 <h2>Horaires<span className="invisible">&nbsp;</span><FontAwesome name="clock-o" /></h2>
                             </div>
@@ -95,7 +97,7 @@ export default class BeachClub extends Component {
 
                     <Row>
                         <Col tag="article"
-                             xs="12" sm="12" md="6" lg="6">
+                             xs="12" sm="12" md="6" lg="6" xl="6">
                             <div className="page-header">
                                 <h2>Tarifs demi-journée</h2>
                                 <p className="small text-muted">Mode de paiement: Chèque - Espèce</p>
@@ -125,7 +127,7 @@ export default class BeachClub extends Component {
                         </Col>
 
                         <Col tag="article"
-                             xs="12" sm="12" md="6" lg="6">
+                             xs="12" sm="12" md="6" lg="6" xl="6">
                             <div className="page-header">
                                 <h2>Tarifs journée complète</h2>
                                 <p className="small text-muted">Mode de paiement: Chèque - Espèce</p>

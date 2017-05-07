@@ -13,7 +13,7 @@ class TeamCol extends Component {
                  itemProp="member"
                  itemScope
                  itemType="http://schema.org/Person"
-                 xs="12" sm="6" md="4" lg="3">
+                 xs="12" sm="6" md="4" lg="3" xl="3">
                 <Card>
                     <CardImg alt={this.props.teammate.name}
                              src={this.props.teammate.image}

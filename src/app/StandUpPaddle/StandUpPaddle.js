@@ -24,8 +24,8 @@ class StandUpPaddle extends Component {
                 <Container>
                     <Row>
                         <Col tag="article"
-                             xs="12" sm="6" md="6" lg="6">
-                            <div className="columns columns-small">
+                             xs="12" sm="6" md="6" lg="6" xl="6">
+                            <div className="columns">
                                 <p>
                                     En famille, entre ami(e)s, seul... découvrez le stand up paddle. Facile d'accès et ludique, ce sport de glisse nautique se pratique debout sur une planche
                                     sur laquelle on se propulse à l'aide d'une pagaie.<br />
@@ -45,10 +45,10 @@ class StandUpPaddle extends Component {
                             </div>
                         </Col>
 
-                        <Col xs="12" sm="6" md="6" lg="6">
+                        <Col xs="12" sm="6" md="6" lg="6" xl="6">
                             <Row>
                                 <Col tag="article"
-                                     xs="12" sm="6" md="6" lg="6">
+                                     xs="12" sm="6" md="6" lg="6" xl="6">
                                     <div className="page-header">
                                         <h2>Tarifs location</h2>
                                         <p className="small text-muted">Gilet de sauvetage inclus <FontAwesome name="heart" /></p>
@@ -58,7 +58,7 @@ class StandUpPaddle extends Component {
                                 </Col>
 
                                 <Col tag="article"
-                                     xs="12" sm="6" md="6" lg="6">
+                                     xs="12" sm="6" md="6" lg="6" xl="6">
                                     <div className="page-header page-header-pb-1">
                                         <h2>Horaires<span className="invisible">&nbsp;</span><FontAwesome name="clock-o" /></h2>
                                     </div>

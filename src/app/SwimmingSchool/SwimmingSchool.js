@@ -25,7 +25,7 @@ export default class SwimmingSchool extends Component {
                 <Container>
                     <Row>
                         <Col tag="article"
-                             xs="12" sm="12" md="7" lg="7">
+                             xs="12" sm="12" md="7" lg="7" xl="7">
                             <div className="columns">
                                 <p>
                                     Dans une piscine chauffée et couverte, l'Albatros propose des leçons <strong>individusalisées</strong> de natation. Les enfants sont deux maximum par cours. Une méthode qui priviligie la familiarisation avec l'eau et l'apprentissage des techniques de nage.<br />
@@ -55,7 +55,7 @@ export default class SwimmingSchool extends Component {
                         </Col>
 
                         <Col tag="article"
-                             xs="12" sm="12" md="5" lg="5">
+                             xs="12" sm="12" md="5" lg="5" xl="5">
                             <p>
                                 <img src={swimmingPool} className="img-fluid img-thumbnail" alt="swimming pool" />
                             </p>
@@ -64,7 +64,7 @@ export default class SwimmingSchool extends Component {
 
                     <Row>
                         <Col tag="article"
-                             xs="12" sm="12" md="7" lg="7">
+                             xs="12" sm="12" md="7" lg="7" xl="7">
                             <div className="page-header page-header-pb-1">
                                 <h2>Tarifs séance</h2>
                             </div>
@@ -73,7 +73,7 @@ export default class SwimmingSchool extends Component {
                         </Col>
 
                         <Col tag="article"
-                             xs="12" sm="12" md="5" lg="5">
+                             xs="12" sm="12" md="5" lg="5" xl="5">
                             <div className="page-header">
                                 <h2>Horaires<span className="invisible">&nbsp;</span><FontAwesome name="clock-o" /></h2>
                                 <p className="small text-muted"><FontAwesome name="exclamation" /> Réservation préalable recommandée</p>

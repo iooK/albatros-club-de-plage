@@ -23,21 +23,19 @@ export default class Fitness extends Component {
 
                 <Container>
                     <Row>
-                        <Col xs="12" sm="6" md="7" lg="7">
+                        <Col xs="12" sm="6" md="7" lg="7" xl="7">
                             <Row>
                                 <Col tag="article"
-                                     xs="12" sm="6" md="6" lg="6">
-                                    <div className="columns columns-small">
-                                        <p>
-                                            Dans le cadre magnifique de la Grande Plage de Quiberon, venez tous les matins pratiquer une séance de remise en forme (réveil musculaire, travail cardio-vasculaire).
-                                            Dans un climat de convivialité, vous pratiquerez toute une palette d'activités pour améliorer votre condition physique, dans un souci de bien-être.
-                                            La marche, le footing, le stretching, les renforcements musculaires, des activités sportives aquatiques (aquagym et aquaforme en mer), ... Notre éducateur s'adapte au niveau de chacun pour que tout le monde éprouve du plaisir.
-                                        </p>
-                                    </div>
+                                     xs="12" sm="6" md="6" lg="6" xl="6">
+                                    <p>
+                                        Dans le cadre magnifique de la Grande Plage de Quiberon, venez tous les matins pratiquer une séance de remise en forme (réveil musculaire, travail cardio-vasculaire).
+                                        Dans un climat de convivialité, vous pratiquerez toute une palette d'activités pour améliorer votre condition physique, dans un souci de bien-être.
+                                        La marche, le footing, le stretching, les renforcements musculaires, des activités sportives aquatiques (aquagym et aquaforme en mer), ... Notre éducateur s'adapte au niveau de chacun pour que tout le monde éprouve du plaisir.
+                                    </p>
                                 </Col>
 
                                 <Col tag="article"
-                                     xs="12" sm="6" md="6" lg="6">
+                                     xs="12" sm="6" md="6" lg="6" xl="6">
                                     <div className="page-header">
                                         <h2>Tarifs séance</h2>
                                     </div>
@@ -48,7 +46,7 @@ export default class Fitness extends Component {
                         </Col>
 
                         <Col tag="article"
-                             xs="12" sm="6" md="5" lg="5">
+                             xs="12" sm="6" md="5" lg="5" xl="5">
                             <div className="page-header">
                                 <h2>Horaires<span className="invisible">&nbsp;</span><FontAwesome name="clock-o" /></h2>
                             </div>

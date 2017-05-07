@@ -52,9 +52,19 @@ span.fa-arrow-right {
     font-size: 0.55rem;
 }
 
+.columns {
+    @include media-breakpoint-up(sm) {
+        column-count: 2;
+        column-gap: 50px;
+        column-rule-color: $light-blue;
+        column-rule-style: solid;
+        column-rule-width: 1px;
+    }
+}
+
 .facebook {
     .navbar-light .navbar-nav &.nav-link {
-        color: #3b5998;
+        color: $facebook;
     }
 }
 
