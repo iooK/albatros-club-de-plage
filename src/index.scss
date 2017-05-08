@@ -4,10 +4,11 @@
 
 @import "./app/BeachClub/BeachClub";
 @import "./app/Fitness/Fitness";
+@import "./app/Navigation/Navigation";
 @import "./app/Partner/Partner";
 @import "./app/StandUpPaddle/StandUpPaddle";
-@import "./app/SwimmingSchool/SwimmingSchool";
 @import "./app/Team/Team";
+@import "./app/SwimmingSchool/SwimmingSchool";
 
 section {
     footer {
@@ -62,18 +63,12 @@ span.fa-arrow-right {
     }
 }
 
-.facebook {
-    .navbar-light .navbar-nav &.nav-link {
-        color: $facebook;
-    }
-}
-
 .page-header {
     margin: ($page-header-margin * 2) 0 $page-header-margin;
     border-bottom: 1px solid $page-header-border-color;
     text-align: center;
 
-    &.page-header-pb-1 {
+    &.pb {
         padding-bottom: (($page-header-margin * 3) + 2);
     }
 }

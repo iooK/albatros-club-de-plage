@@ -65,7 +65,7 @@ export default class SwimmingSchool extends Component {
                     <Row>
                         <Col tag="article"
                              xs="12" sm="12" md="7" lg="7" xl="7">
-                            <div className="page-header page-header-pb-1">
+                            <div className="page-header pb">
                                 <h2>Tarifs séance</h2>
                             </div>
 

@@ -59,7 +59,7 @@ class StandUpPaddle extends Component {
 
                                 <Col tag="article"
                                      xs="12" sm="6" md="6" lg="6" xl="6">
-                                    <div className="page-header page-header-pb-1">
+                                    <div className="page-header pb">
                                         <h2>Horaires<span className="invisible">&nbsp;</span><FontAwesome name="clock-o" /></h2>
                                     </div>
 

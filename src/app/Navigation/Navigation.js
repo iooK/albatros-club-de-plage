@@ -8,8 +8,10 @@ export default class Navigation extends Component {
         super(props);
 
         this.toggle = this.toggle.bind(this);
+        this.active = this.active.bind(this);
         this.state = {
             'isOpen': false,
+            'activeLink': 1,
         };
     }
 
@@ -19,33 +21,103 @@ export default class Navigation extends Component {
         });
     }
 
+    active(link) {
+        if (this.state.activeLink === link) {
+            return;
+        }
+
+        this.setState({
+            'activeLink': link,
+        });
+    }
+
     render() {
         return (
-            <Navbar className="navbar-toggleable-md"
-                    color="faded"
+            <Navbar color="faded"
                     fixed="top"
                     light
-                    toggleable>
-                <NavbarToggler onClick={this.toggle}
-                               right />
+                    toggleable="md">
+                <NavbarToggler onClick={this.toggle} right />
                 <NavbarBrand href="/">Albatros</NavbarBrand>
 
-                <Collapse isOpen={this.state.isOpen}
-                          navbar>
-                    <Nav navbar>
-                        <NavItem><NavLink href="#BeachClub" target="_self">Club de Plage</NavLink></NavItem>
-                        <NavItem><NavLink href="#SwimmingSchool" target="_self">Ecole de Natation</NavLink></NavItem>
-                        <NavItem><NavLink href="#Fitness" target="_self">Remise en Forme</NavLink></NavItem>
-                        <NavItem><NavLink href="#StandUpPaddle" target="_self">Stand Up Paddle</NavLink></NavItem>
-                        <NavItem><NavLink href="#Team" target="_self">l'Equipe</NavLink></NavItem>
-                        <NavItem><NavLink href="#Contact" target="_self">Contact</NavLink></NavItem>
-                        <NavItem><NavLink href="#Partner" target="_self">Partenariat</NavLink></NavItem>
-                        <NavItem><NavLink className="facebook"
-                                          href="https://www.facebook.com/AlbatrosClubDePlage"
-                                          target="_blank"><FontAwesome name="facebook-official" />Facebook</NavLink></NavItem>
+                <Collapse isOpen={this.state.isOpen} navbar>
+                    <Nav navbar pills>
+                        <NavItem className="text-center">
+                            <NavLink className={{ 'active': this.state.activeLink === 'beachClub' }}
+                                     href="#BeachClub"
+                                     onClick={() => { this.active('beachClub'); }}
+                                     target="_self">
+                                Club de Plage
+                            </NavLink>
+                        </NavItem>
+
+                        <NavItem className="text-center">
+                            <NavLink className={{ 'active': this.state.activeLink === 'swimmingSchool' }}
+                                     href="#SwimmingSchool"
+                                     onClick={() => { this.active('swimmingSchool'); }}
+                                     target="_self">
+                                Ecole de Natation
+                            </NavLink>
+                        </NavItem>
+
+                        <NavItem className="text-center">
+                            <NavLink className={{ 'active': this.state.activeLink === 'fitness' }}
+                                     href="#Fitness"
+                                     onClick={() => { this.active('fitness'); }}
+                                     target="_self">
+                                Remise en Forme
+                            </NavLink>
+                        </NavItem>
+
+                        <NavItem className="text-center">
+                            <NavLink className={{ 'active': this.state.activeLink === 'standUpPaddle' }}
+                                     href="#StandUpPaddle"
+                                     onClick={() => { this.active('standUpPaddle'); }}
+                                     target="_self">
+                                Stand Up Paddle
+                            </NavLink>
+                        </NavItem>
+
+                        <NavItem className="text-center">
+                            <NavLink className={{ 'active': this.state.activeLink === 'team' }}
+                                     href="#Team"
+                                     onClick={() => { this.active('team'); }}
+                                     target="_self">
+                                l'Équipe
+                            </NavLink>
+                        </NavItem>
+
+                        <NavItem className="text-center">
+                            <NavLink className={{ 'active': this.state.activeLink === 'contact' }}
+                                     href="#Contact"
+                                     onClick={() => { this.active('contact'); }}
+                                     target="_self">
+                                Contact
+                            </NavLink>
+                        </NavItem>
+
+                        <NavItem className="text-center">
+                            <NavLink className={{ 'active': this.state.activeLink === 'partner' }}
+                                     href="#Partner"
+                                     onClick={() => { this.active('partner'); }}
+                                     target="_self">
+                                Partenariat
+                            </NavLink>
+                        </NavItem>
+
+                        <NavItem className="text-center">
+                            <NavLink className="facebook"
+                                     href="https://www.facebook.com/AlbatrosClubDePlage"
+                                     target="_blank">
+                                <FontAwesome name="facebook-official" />&nbsp;Facebook
+                            </NavLink>
+                        </NavItem>
                     </Nav>
                 </Collapse>
             </Navbar>
         );
     }
 }
+
+
+

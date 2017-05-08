@@ -1,0 +1,30 @@
+// Overwrite some classes of navnar of Bootstrap 4
+
+.navbar-light .navbar-brand {
+    color: $black;
+
+    @include hover-focus {
+        color: $black;
+    }
+}
+
+.navbar-light .navbar-nav .nav-link {
+    @include hover-focus {
+        color: $blue;
+    }
+
+    &.facebook {
+        color: $facebook;
+
+        @include hover-focus {
+            background-color: $facebook;
+            color: $white;
+        }
+    }
+}
+
+.nav-pills .nav-link {
+    @include hover-focus {
+        background-color: $light-blue;
+    }
+}
