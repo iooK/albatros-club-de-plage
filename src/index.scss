@@ -29,22 +29,6 @@ section {
     h2 {
         text-decoration: underline;
     }
-
-    .parallax {
-        background: no-repeat fixed center;
-        background-size: cover;
-        height: 550px;
-        position: relative;
-
-        span {
-            color: $white;
-            display: block;
-            font-size: $font-size-h1;
-            line-height: $font-size-h1;
-            margin: 20px;
-            text-shadow: 0 2px 0 $real-black, 1px 0 10px $real-black, 0 1px 10px $real-black, -1px 0 10px $real-black, 0 -1px 10px $real-black;
-        }
-    }
 }
 
 span.fa-arrow-right {
@@ -70,6 +54,22 @@ span.fa-arrow-right {
 
     &.pb {
         padding-bottom: (($page-header-margin * 3) + 2);
+    }
+}
+
+.parallax {
+    background: no-repeat fixed center;
+    background-size: cover;
+    height: 550px;
+    position: relative;
+
+    span {
+        color: $white;
+        display: block;
+        font-size: $font-size-h1;
+        line-height: $font-size-h1;
+        padding: 20px;
+        text-shadow: 0 2px 0 $real-black, 1px 0 10px $real-black, 0 1px 10px $real-black, -1px 0 10px $real-black, 0 -1px 10px $real-black;
     }
 }
 

@@ -1,0 +1,19 @@
+runtime: php
+env: flex
+api_version: 1
+threadsafe: yes
+
+skip_files:
+# ignore all hidden files
+- ^(.*/)?\..*$
+
+# ignore all backup files
+- ^(.*/)?#.*#$
+- ^(.*/)?\.bak$
+
+# ignore all except build directory
+- ^(?!build/).*$
+
+handlers:
+- url: /
+  static_dir: build/

@@ -51,7 +51,7 @@ export default class Contact extends Component {
                 });
             },
             (error) => {
-                throw new Error('Can\'t find your location. With this message: ' + error);
+                throw new Error('Can\'t find your location.\nError code: ' + error.code + '\nError message: ' + error.message);
             }, {
                 'enableHighAccuracy': true,
             });
