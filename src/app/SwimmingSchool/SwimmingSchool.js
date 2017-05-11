@@ -4,21 +4,18 @@ import { Col, Container, Row } from 'reactstrap';
 
 import backgroundImage from '../../img/background/swimming-school.jpg';
 import FontAwesome from 'react-fontawesome';
-import Table from '../Table/Table';
+import Table from '../../components/Table/Table';
+import Parallax from '../../components/Parallax/Parallax';
 import swimmingPool from '../../img/swimming-pool.jpg';
 import swimmingSchoolOpening, {swimmingSchoolPrices} from './swimmingSchoolData';
 
 export default class SwimmingSchool extends Component {
     render() {
-        const styles = {
-            'backgroundImage': 'url('+backgroundImage+')',
-        };
-
         return (
             <section className="SwimmingSchool">
-                <header style={styles} className="parallax">
-                    <span>Profitez de l'été pour apprendre à nager avec l'Ecole de Natation</span>
-                </header>
+                <Parallax backgroundImage={backgroundImage}>
+                    Profitez de l'été pour apprendre à nager avec l'Ecole de Natation
+                </Parallax>
 
                 <h1 id="SwimmingSchool">Ecole de Natation</h1>
 

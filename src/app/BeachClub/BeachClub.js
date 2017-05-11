@@ -5,7 +5,8 @@ import { Button, Col, Container, Modal, ModalBody, ModalFooter, ModalHeader, Row
 
 import backgroundImage from '../../img/background/beach-club.jpg';
 import opening, { beachClubFullDayPrices as fullDayPrices, beachClubHalfDayPrices as halfDayPrices } from './beachClubData';
-import Table from '../Table/Table';
+import Parallax from '../../components/Parallax/Parallax';
+import Table from '../../components/Table/Table';
 
 export default class BeachClub extends Component {
     constructor(props) {
@@ -48,15 +49,11 @@ export default class BeachClub extends Component {
     }
 
     render() {
-        const styles = {
-            'backgroundImage': 'url('+backgroundImage+')',
-        };
-
         return (
             <section className="BeachClub">
-                <header style={styles} className="parallax">
-                    <span>l'Albatros accueille vos enfants pour leur faire passer des vacances inoubliables</span>
-                </header>
+                <Parallax backgroundImage={backgroundImage}>
+                    l'Albatros accueille vos enfants pour leur faire passer des vacances inoubliables
+                </Parallax>
 
                 <h1 id="BeachClub">Club de Plage</h1>
 
@@ -97,7 +94,7 @@ export default class BeachClub extends Component {
 
                     <Row>
                         <Col tag="article"
-                             xs="12" sm="12" md="6" lg="6" xl="6">
+                             xs="12" sm="6" md="6" lg="6" xl="6">
                             <div className="page-header">
                                 <h2>Tarifs demi-journée</h2>
                                 <p className="small text-muted">Mode de paiement: Chèque - Espèce</p>
@@ -105,29 +102,27 @@ export default class BeachClub extends Component {
 
                             <Table data={BeachClub.getShortHalfDayPrices()} withColHeader={true} withRowHeader={true} />
 
-                            <div>
-                                <div className="text-center">
-                                    <Button color="secondary" onClick={this.toggleHalfDayPrices}><FontAwesome name="plus"/> Afficher les tarifs préférentiels</Button>
-                                </div>
-
-                                <Modal isOpen={this.state.isOpenHalfDayPrices} toggle={this.toggleHalfDayPrices}>
-                                    <ModalHeader toggle={this.toggleHalfDayPrices}>
-                                        Tarifs demi-journée
-                                    </ModalHeader>
-
-                                    <ModalBody>
-                                        <Table data={halfDayPrices} withColHeader={true} withRowHeader={true} />
-                                    </ModalBody>
-
-                                    <ModalFooter>
-                                        <Button color="secondary" onClick={this.toggleHalfDayPrices}>Fermer</Button>
-                                    </ModalFooter>
-                                </Modal>
+                            <div className="text-center">
+                                <Button color="secondary" onClick={this.toggleHalfDayPrices}><FontAwesome name="plus"/> Afficher les tarifs préférentiels</Button>
                             </div>
+
+                            <Modal isOpen={this.state.isOpenHalfDayPrices} toggle={this.toggleHalfDayPrices}>
+                                <ModalHeader toggle={this.toggleHalfDayPrices}>
+                                    Tarifs demi-journée
+                                </ModalHeader>
+
+                                <ModalBody>
+                                    <Table data={halfDayPrices} withColHeader={true} withRowHeader={true} />
+                                </ModalBody>
+
+                                <ModalFooter>
+                                    <Button color="secondary" onClick={this.toggleHalfDayPrices}>Fermer</Button>
+                                </ModalFooter>
+                            </Modal>
                         </Col>
 
                         <Col tag="article"
-                             xs="12" sm="12" md="6" lg="6" xl="6">
+                             xs="12" sm="6" md="6" lg="6" xl="6">
                             <div className="page-header">
                                 <h2>Tarifs journée complète</h2>
                                 <p className="small text-muted">Mode de paiement: Chèque - Espèce</p>
@@ -135,25 +130,23 @@ export default class BeachClub extends Component {
 
                             <Table data={BeachClub.getShortFullDayPrices()} withColHeader={true} withRowHeader={true} />
 
-                            <div>
-                                <div className="text-center">
-                                    <Button color="secondary" onClick={this.toggleFullDayPrices}><FontAwesome name="plus"/> Afficher les tarifs préférentiels</Button>
-                                </div>
-
-                                <Modal isOpen={this.state.isOpenFullDayPrices} toggle={this.toggleFullDayPrices}>
-                                    <ModalHeader toggle={this.toggleFullDayPrices}>
-                                        Tarifs journée complète
-                                    </ModalHeader>
-
-                                    <ModalBody>
-                                        <Table data={fullDayPrices} withColHeader={true} withRowHeader={true} />
-                                    </ModalBody>
-
-                                    <ModalFooter>
-                                        <Button color="secondary" onClick={this.toggleFullDayPrices}>Fermer</Button>
-                                    </ModalFooter>
-                                </Modal>
+                            <div className="text-center">
+                                <Button color="secondary" onClick={this.toggleFullDayPrices}><FontAwesome name="plus"/> Afficher les tarifs préférentiels</Button>
                             </div>
+
+                            <Modal isOpen={this.state.isOpenFullDayPrices} toggle={this.toggleFullDayPrices}>
+                                <ModalHeader toggle={this.toggleFullDayPrices}>
+                                    Tarifs journée complète
+                                </ModalHeader>
+
+                                <ModalBody>
+                                    <Table data={fullDayPrices} withColHeader={true} withRowHeader={true} />
+                                </ModalBody>
+
+                                <ModalFooter>
+                                    <Button color="secondary" onClick={this.toggleFullDayPrices}>Fermer</Button>
+                                </ModalFooter>
+                            </Modal>
                         </Col>
                     </Row>
                 </Container>

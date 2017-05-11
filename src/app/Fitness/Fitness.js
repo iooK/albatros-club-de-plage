@@ -5,25 +5,22 @@ import { Col, Container, Row } from 'reactstrap';
 import backgroundImage from '../../img/background/fitness.jpg';
 import fitnessOpening, {fitnessPrices} from './fitnessData';
 import FontAwesome from 'react-fontawesome';
-import Table from '../Table/Table';
+import Parallax from '../../components/Parallax/Parallax';
+import Table from '../../components/Table/Table';
 
 export default class Fitness extends Component {
     render() {
-        const styles = {
-            'backgroundImage': 'url('+backgroundImage+')',
-        };
-
         return (
             <section className="Fitness">
-                <header style={styles} className="parallax">
-                    <span>Des vacances au top de la forme</span>
-                </header>
+                <Parallax backgroundImage={backgroundImage}>
+                    Des vacances au top de la forme
+                </Parallax>
 
                 <h1 id="Fitness">Remise en forme</h1>
 
                 <Container>
                     <Row>
-                        <Col xs="12" sm="6" md="7" lg="7" xl="7">
+                        <Col xs="12" sm="12" md="7" lg="7" xl="7">
                             <Row>
                                 <Col tag="article"
                                      xs="12" sm="6" md="6" lg="6" xl="6">
@@ -46,7 +43,7 @@ export default class Fitness extends Component {
                         </Col>
 
                         <Col tag="article"
-                             xs="12" sm="6" md="5" lg="5" xl="5">
+                             xs="12" sm="12" md="5" lg="5" xl="5">
                             <div className="page-header">
                                 <h2>Horaires<span className="invisible">&nbsp;</span><FontAwesome name="clock-o" /></h2>
                             </div>

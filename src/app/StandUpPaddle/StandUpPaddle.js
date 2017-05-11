@@ -5,26 +5,23 @@ import { Col, Container, Row } from 'reactstrap';
 import backgroundImage from '../../img/background/stand-up-paddle.jpg';
 import FontAwesome from 'react-fontawesome';
 import standUpPaddleOpening, {standUpPaddlePrices} from './standUpPaddleData';
-import Table from '../Table/Table';
+import Parallax from '../../components/Parallax/Parallax';
+import Table from '../../components/Table/Table';
 
 class StandUpPaddle extends Component {
     render() {
-        const styles = {
-            'backgroundImage': 'url('+backgroundImage+')',
-        };
-
         return (
             <section className="StandUpPaddle">
-                <header style={styles} className="parallax">
-                    <span>Et si on marchait sur l'eau...</span>
-                </header>
+                <Parallax backgroundImage={backgroundImage}>
+                    Et si on marchait sur l'eau...
+                </Parallax>
 
                 <h1 id="StandUpPaddle">Stand Up Paddle</h1>
 
                 <Container>
                     <Row>
                         <Col tag="article"
-                             xs="12" sm="6" md="6" lg="6" xl="6">
+                             xs="12" sm="12" md="12" lg="6" xl="6">
                             <div className="columns">
                                 <p>
                                     En famille, entre ami(e)s, seul... découvrez le stand up paddle. Facile d'accès et ludique, ce sport de glisse nautique se pratique debout sur une planche
@@ -45,7 +42,7 @@ class StandUpPaddle extends Component {
                             </div>
                         </Col>
 
-                        <Col xs="12" sm="6" md="6" lg="6" xl="6">
+                        <Col xs="12" sm="12" md="12" lg="6" xl="6">
                             <Row>
                                 <Col tag="article"
                                      xs="12" sm="6" md="6" lg="6" xl="6">

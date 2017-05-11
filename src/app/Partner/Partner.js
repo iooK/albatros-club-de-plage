@@ -6,6 +6,10 @@ import { Card, CardFooter, CardHeader, CardImg, CardTitle, CardLink, Col, Contai
 import partnerData from './partnerData';
 
 class PartnerCol extends Component {
+    static propTypes = {
+        'partner': PropTypes.object,
+    };
+
     render() {
         return (
             <Col className="mb-3"
@@ -34,10 +38,6 @@ class PartnerCol extends Component {
         );
     }
 }
-
-PartnerCol.propTypes = {
-    'partner': PropTypes.object,
-};
 
 class Partner extends Component {
     render() {
