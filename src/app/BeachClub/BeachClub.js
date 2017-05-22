@@ -112,6 +112,8 @@ export default class BeachClub extends Component {
                                 </ModalHeader>
 
                                 <ModalBody>
+                                    <FontAwesome className="float-left hidden-sm-up" name="long-arrow-left"/>
+                                    <FontAwesome className="float-right hidden-sm-up" name="long-arrow-right"/>
                                     <Table data={halfDayPrices} withColHeader={true} withRowHeader={true} />
                                 </ModalBody>
 
@@ -140,6 +142,8 @@ export default class BeachClub extends Component {
                                 </ModalHeader>
 
                                 <ModalBody>
+                                    <FontAwesome className="float-left hidden-sm-up" name="long-arrow-left"/>
+                                    <FontAwesome className="float-right hidden-sm-up" name="long-arrow-right"/>
                                     <Table data={fullDayPrices} withColHeader={true} withRowHeader={true} />
                                 </ModalBody>
 
