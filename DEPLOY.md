@@ -1,8 +1,14 @@
 # albatros-club-de-plage
 
-### Install Git
+## Install Git
+On MacOs, install XCode from Appstore. Then execute
+```
+sudo xcodebuild -license
+xcode-select --install
+```
 
-### Install Nodejs
+## Install Nodejs
+Download [here](https://nodejs.org/en/).
 
 ### Install Yarn (in global)
 (sudo) npm install --global yarn
@@ -15,10 +21,8 @@ cd albatros-club-de-plage
 yarn install
 yarn start
 
-### Install Gcloud
+### Install and initialize Gcloud
 https://cloud.google.com/sdk/docs/quickstarts
-
-### Configure Gcloud
 
 ### Build the project
 yarn run build
