@@ -1,27 +1,31 @@
 const teamData = [{
-    'image': '/live/img/team/alize.jpg',
-    'name': 'Alizé',
-    'description': 'Animatrice au mois d\'Août, Alizé est étudiante au centre de formation d’éducateurs de jeunes enfants à Malakoff. Son parcours est riche de nombreux stages.',
+    'image': '/live/img/team2/goofy.jpg',
+    'name': 'Goofy',
+    'description': 'La mascotte de l Albatros. Cocker anglais. ',
 }, {
-    'image': '/live/img/team/aminata.jpg',
-    'name': 'Aminata',
-    'description': 'Forte d’un passé de haut niveau en patinage artistique, Aminata a passé ses diplômes pour pouvoir travailler auprès des enfants. Elle est animatrice.',
+    'image': '/live/img/team2/julie.jpg',
+    'name': 'Julie',
+    'description': 'Animatrice des 3-6 ans, titulaire du Master métier de l\'enseignement, de l\'éducation  et de la formation.',
 }, {
-    'image': '/live/img/team/noemie.jpg',
-    'name': 'Noémie',
-    'description': 'Animatrice au mois de Juillet, Noémie est étudiante. Elle se prépare à devenir éducatrice auprès de jeunes enfants.',
-}, {
-    'image': '/live/img/team/julien.jpg',
-    'name': 'Julien',
-    'description': 'Titulaire d\'un Master 2 STAPS en préparation physique ainsi que du BEESAN (Diplôme d\'État de Maître-Nageur), Julien est maître-nageur, il assure aussi la remise en forme des adultes le matin ainsi que le longe-côte.',
-}, {
-    'image': '/live/img/team/nicolas.jpg',
+    'image': '/live/img/team2/nicolas.jpg',
     'name': 'Nicolas',
-    'description': 'Titulaire d\'un Master 2 STAPS ainsi que du BEESAN (Diplôme d\'État de Maître-Nageur), Nicolas est maître-nageur durant les 2 mois d\'été. Il encadre aussi le longe-côte et est animateur auprès des enfants du club.',
+    'description': 'Directeur associé du club de plage, maître nageur diplômé d\'état. Titulaire du Master Staps.',
 }, {
-    'image': '/live/img/team/yoann.jpg',
-    'name': 'Yoann',
-    'description': 'Etudiant en Master 2 STAPS, spécialiste de la préparation physique, Yoann est animateur au mois de Juillet.',
+    'image': '/live/img/team2/melanie.jpg',
+    'name': 'Mélanie',
+    'description': 'Animatrice des 3-6 ans en préparation du diplôme de professeur de Danse. ',
+}, {
+    'image': '/live/img/team2/julien.jpg',
+    'name': 'Julien',
+    'description': 'Directeur associé du club de plage, maître nageur diplômé d\'état. Titulaire du Master Staps.',
+}, {
+    'image': '/live/img/team2/malo.jpg',
+    'name': 'Malo',
+    'description': 'Maître nageur diplôme d état.',
+}, {
+    'image': '/live/img/team2/marie.jpg',
+    'name': 'Marie',
+    'description': 'Diplômée licence STAPS éducation motricité',
 }];
 
 export default teamData;

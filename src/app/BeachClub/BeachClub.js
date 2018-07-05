@@ -63,7 +63,7 @@ export default class BeachClub extends Component {
                              xs="12" sm="12" md="6" lg="6" xl="6">
                             <div className="columns">
                                 <p>
-                                    Le Mini Club Albatros et l'Albatros Sportif accueillent les enfants de 3 à 12 ans pour des animations ludiques et encadrées.
+                                    Le Mini Club Albatros et l'Albatros Sportif accueillent les enfants de 3 à 14 ans pour des animations ludiques et encadrées.
                                 </p>
 
                                 <h2>Mini Club Albatros</h2>
@@ -75,7 +75,7 @@ export default class BeachClub extends Component {
                                 <h2>Albatros Sportif</h2>
 
                                 <p>
-                                    Pour les plus grands de 7 à 12 ans, le caractère sportif est ici plus poussé. Pour un épanouissement total et la découverte de sports pendant les vacances.
+                                    Pour les plus grands de 7 à 14 ans, le caractère sportif est ici plus poussé. Pour un épanouissement total et la découverte de sports pendant les vacances.
                                 </p>
                             </div>
                         </Col>
