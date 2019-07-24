@@ -26,6 +26,14 @@ const teamData = [{
     'image': '/live/img/team2/thibault.jpg',
     'name': 'Thibault',
     'description': 'Animateur BAFA',
+}, {
+    'image': '/live/img/team2/aurelien.jpg',
+    'name': 'Aurélien',
+    'description': 'Maître nageur',
+}, {
+    'image': '/live/img/team2/antoine.jpg',
+    'name': 'Antoine',
+    'description': 'Animateur BAFA',
 }];
 
 export default teamData;
