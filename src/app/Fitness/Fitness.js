@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import { Col, Container, Row } from 'reactstrap';
 
 import backgroundImage from '../../img/background/fitness.jpg';
-import fitnessOpening, {fitnessPrices} from './fitnessData';
+import fitnessOpening, {fitnessPrices, paddleFitnessPrices} from './fitnessData';
 import FontAwesome from 'react-fontawesome';
 import Parallax from '../../components/Parallax/Parallax';
 import Table from '../../components/Table/Table';
@@ -39,6 +39,17 @@ export default class Fitness extends Component {
 
                                     <Table data={fitnessPrices} withRowHeader={true} />
                                 </Col>
+
+                                <Col tag="article"
+                                     xs="12" sm="6" md="6" lg="6" xl="6">
+                                    <div className="page-header">
+                                        <h2>Tarifs séance Fitness Paddle</h2>
+                                    </div>
+
+                                    <Table data={paddleFitnessPrices} withRowHeader={true} />
+                                </Col>
+
+
                             </Row>
                         </Col>
 

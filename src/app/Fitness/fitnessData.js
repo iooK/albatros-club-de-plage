@@ -19,7 +19,13 @@ const fitnessOpening = [[
 const fitnessPrices = [[
     'Tarif séance', 'Les 2 séances d\'affilée',
 ], [
-    '7 €', '12 €',
+    '8 €', '12 €',
 ]];
 
-export { fitnessOpening as default, fitnessPrices};
+const paddleFitnessPrices = [[
+    'Tarif séance',
+], [
+    '8 €',
+]];
+
+export { fitnessOpening as default, fitnessPrices, paddleFitnessPrices};
