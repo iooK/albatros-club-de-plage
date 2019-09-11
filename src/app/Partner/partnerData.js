@@ -7,17 +7,9 @@ const partnerData = [{
     'name': 'La Cour D\'Orgères',
     'link': 'http://www.lacourdorgeres.com/',
 }, {
-    'image': '/live/img/partner/pasquier.png',
-    'name': 'Brioches Pasquier',
-    'link': 'http://www.pasquier.fr/',
-}, {
     'image': '/live/img/partner/la-belle-iloise.png',
     'name': 'La Belle-Îloise',
     'link': 'http://www.labelleiloise.fr/',
-}, {
-    'image': '/live/img/partner/OCEANGATE.png',
-    'name': 'Ocean Gate',
-    'link': 'http://oceangate.fr/',
 }, {
     'image': '/live/img/partner/gma.jpg',
     'name': 'Guide Montagne Aventure',
@@ -27,9 +19,21 @@ const partnerData = [{
     'name': 'Biscuiterie La Trinitaine',
     'link': 'https://www.latrinitaine.com',
 }, {
-    'image': '/live/img/partner/bilboquet.png',
-    'name': 'Bilboquet de Vannes',
-    'link': 'https://www.bilboquet.com/',
+    'image': '/live/img/partner/bihan.jpg',
+    'name': 'Bihan Boulangerie',
+    'link': 'https://www.facebook.com/boulangeriepatisserie.bihan.5',
+}, {
+    'image': '/live/img/partner/armorine.jpg',
+    'name': 'Niniche Quiberon',
+    'link': 'https://www.maison-armorine.com/nos-produits/niniches',
+}, {
+    'image': '/live/img/partner/decathlon.png',
+    'name': 'Décathlon Quiberon',
+    'link': 'https://www.decathlon.fr/fr/magasin/magasin-sport-quiberon-popup-MS_0070240502405.html',
+}, {
+    'image': '/live/img/partner/maizelledantan.png',
+    'name': 'Mai z\'elle d\'antan Quiberon',
+    'link': 'https://mamzelledantan.com/',
 }];
 
 export default partnerData;
