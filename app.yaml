@@ -1,20 +1,6 @@
 runtime: php72
 api_version: 1
 
-skip_files:
-# ignore all hidden files
-- ^(.*/)?\..*$
-
-# ignore all backup files
-- ^(.*/)?#.*#$
-- ^(.*/)?.*~$
-- ^(.*/)?.*\.py[co]$
-- ^(.*/)?.*/RCS/.*$
-- ^(.*/)?\.bak$
-
-# ignore all except build directory
-- ^(config/|node_modules/|public/|scripts/|src/).*$
-
 default_expiration: "30d"
 
 handlers:
