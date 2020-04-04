@@ -25,7 +25,7 @@ export default class SwimmingSchool extends Component {
                              xs="12" sm="12" md="7" lg="7" xl="7">
                             <div className="columns">
                                 <p>
-                                    Dans une piscine chauffée et couverte, l'Albatros propose des leçons <strong>individusalisées</strong> de natation. Les enfants sont deux maximum par cours. Une méthode qui priviligie la familiarisation avec l'eau et l'apprentissage des techniques de nage.<br />
+                                    Dans une piscine chauffée et couverte, l'Albatros propose des leçons <strong>individualisées</strong> de natation. Les enfants sont deux maximum par cours. Une méthode qui privilégie la familiarisation avec l'eau et l'apprentissage des techniques de nage.<br />
                                     Les leçons de natations sont dispensés par un maître-nageur diplômé d'état offrant à vos enfants des progrès visibles et des résultats garantis.<br />
                                     Une séance dure 20 minutes, la durée idéale pour une concentration de qualité et un engagement moteur optimal.<br />
                                     L'Ecole de Natation s'appuie sur 3 niveaux d'enseignement: l'initiation, l'apprentissage et le perfectionnement.
