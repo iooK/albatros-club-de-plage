@@ -1,17 +1,17 @@
 const fitnessOpening = [[
     '', 'Remise en forme', 'Longe-côte',
 ], [
-    'lundi', { 'from': '10h15', 'to': '11h15' }, { 'from': '11h30', 'to': '12h15' },
+    'lundi', { 'from': '10h30', 'to': '11h30' }, { 'from': '11h45', 'to': '12h30' },
 ], [
-    'mardi', { 'from': '10h15', 'to': '11h15' }, { 'from': '11h30', 'to': '12h15' },
+    'mardi', { 'from': '10h30', 'to': '11h30' }, { 'from': '11h45', 'to': '12h30' },
 ], [
-    'mercredi', { 'from': '10h15', 'to': '11h15' }, { 'from': '11h30', 'to': '12h15' },
+    'mercredi', { 'from': '10h30', 'to': '11h30' }, { 'from': '11h45', 'to': '12h30' },
 ], [
-    'jeudi', { 'from': '10h15', 'to': '11h15' }, { 'from': '11h30', 'to': '12h15' },
+    'jeudi', { 'from': '10h30', 'to': '11h30' }, { 'from': '11h45', 'to': '12h30' },
 ], [
-    'vendredi', { 'from': '10h15', 'to': '11h15' }, { 'from': '11h30', 'to': '12h15' },
+    'vendredi', { 'from': '10h30', 'to': '11h30' }, { 'from': '11h45', 'to': '12h30' },
 ], [
-    'samedi', { 'from': '10h15', 'to': '11h15' }, { 'from': '11h30', 'to': '12h15' },
+    'samedi', { 'from': '10h30', 'to': '11h30' }, { 'from': '11h45', 'to': '12h30' },
 ], [
     'dimanche', 'Fermé', '',
 ]];
