@@ -1,4 +1,8 @@
 const partnerData = [{
+    'image': '/live/img/partner/maison-lucas.png',
+    'name': 'Maison Lucas',
+    'link': 'http://www.maisonlucas.net/',
+}, {
     'image': '/live/img/partner/sublimons-logo.png',
     'name': 'Sublimons',
     'link': 'https://www.sublimons.com/',
