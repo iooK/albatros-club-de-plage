@@ -17,13 +17,13 @@ const swimmingSchoolOpening = [[
 const swimmingSchoolPrices = [[
     '', 'Membre externe au club', 'Membre du club',
 ], [
-    'Séance unique', '18 €', '16 €',
+    'Séance unique', '20 €', '18 €',
 ], [
-    'Stage de 6 leçons', '100 €', '95 €',
+    'Stage de 6 leçons', '111 €', '105 €',
 ], [
-    'Stage de 10 leçons', '155 €', '145 €',
+    'Stage de 10 leçons', '172 €', '160 €',
 ], [
-    'Stage de 15 leçons', '190 €', '175 €',
+    'Stage de 15 leçons', '210 €', '195 €',
 ]];
 
 export { swimmingSchoolOpening as default, swimmingSchoolPrices};
