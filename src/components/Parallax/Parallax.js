@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-export default class Fitness extends Component {
+export default class Parallax extends Component {
     static propTypes = {
         'backgroundImage': PropTypes.string,
         'children': PropTypes.node,

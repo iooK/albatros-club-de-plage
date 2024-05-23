@@ -43,7 +43,7 @@ export default class Navigation extends Component {
                 <Collapse isOpen={this.state.isOpen} navbar>
                     <Nav navbar pills>
                         <NavItem className="text-center">
-                            <NavLink className={{ 'active': this.state.activeLink === 'beachClub' }}
+                            <NavLink className={ this.state.activeLink === 'beachClub' ? 'active' : '' }
                                      href="#BeachClub"
                                      onClick={() => { this.active('beachClub'); }}
                                      target="_self">
@@ -52,7 +52,7 @@ export default class Navigation extends Component {
                         </NavItem>
 
                         <NavItem className="text-center">
-                            <NavLink className={{ 'active': this.state.activeLink === 'swimmingSchool' }}
+                            <NavLink className={ this.state.activeLink === 'swimmingSchool' ? 'active' : '' }
                                      href="#SwimmingSchool"
                                      onClick={() => { this.active('swimmingSchool'); }}
                                      target="_self">
@@ -61,7 +61,7 @@ export default class Navigation extends Component {
                         </NavItem>
 
                         <NavItem className="text-center">
-                            <NavLink className={{ 'active': this.state.activeLink === 'fitness' }}
+                            <NavLink className={ this.state.activeLink === 'fitness' ? 'active' : '' }
                                      href="#Fitness"
                                      onClick={() => { this.active('fitness'); }}
                                      target="_self">
@@ -70,7 +70,7 @@ export default class Navigation extends Component {
                         </NavItem>
 
                         <NavItem className="text-center">
-                            <NavLink className={{ 'active': this.state.activeLink === 'standUpPaddle' }}
+                            <NavLink className={ this.state.activeLink === 'standUpPaddle' ? 'active' : '' }
                                      href="#StandUpPaddle"
                                      onClick={() => { this.active('standUpPaddle'); }}
                                      target="_self">
@@ -79,7 +79,7 @@ export default class Navigation extends Component {
                         </NavItem>
 
                         <NavItem className="text-center">
-                            <NavLink className={{ 'active': this.state.activeLink === 'team' }}
+                            <NavLink className={ this.state.activeLink === 'team' ? 'active' : '' }
                                      href="#Team"
                                      onClick={() => { this.active('team'); }}
                                      target="_self">
@@ -88,7 +88,7 @@ export default class Navigation extends Component {
                         </NavItem>
 
                         <NavItem className="text-center">
-                            <NavLink className={{ 'active': this.state.activeLink === 'contact' }}
+                            <NavLink className={ this.state.activeLink === 'contact' ? 'active' : '' }
                                      href="#Contact"
                                      onClick={() => { this.active('contact'); }}
                                      target="_self">
@@ -97,7 +97,7 @@ export default class Navigation extends Component {
                         </NavItem>
 
                         <NavItem className="text-center">
-                            <NavLink className={{ 'active': this.state.activeLink === 'partner' }}
+                            <NavLink className={ this.state.activeLink === 'partner' ? 'active' : ''}
                                      href="#Partner"
                                      onClick={() => { this.active('partner'); }}
                                      target="_self">
@@ -118,6 +118,3 @@ export default class Navigation extends Component {
         );
     }
 }
-
-
-
