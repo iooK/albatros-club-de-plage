@@ -1,7 +1,8 @@
 import React from "react";
 import { Col as BootstrapCol, Container as BootstrapContainer, Row as BootstrapRow } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowCircleDown, faClock, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faArrowCircleDown, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faClock as faClockRegular } from "@fortawesome/free-regular-svg-icons";
 
 import backgroundImage from "@/components/StandUpPaddle/stand-up-paddle-background.jpg";
 import Table from "@/components/Table/Table";
@@ -65,7 +66,7 @@ export default function StandUpPaddle() {
                                 <div className="page-header">
                                     <h2>Tarifs location</h2>
                                     <p className="small text-muted">
-                                        Gilet de sauvetage inclus
+                                        Gilet de sauvetage inclus&nbsp;
                                         <FontAwesomeIcon icon={faHeart} />
                                     </p>
                                 </div>
@@ -81,9 +82,11 @@ export default function StandUpPaddle() {
                             >
                                 <div className="page-header pb">
                                     <h2>
-                                        Horaires
-                                        <span className="invisible">&nbsp;</span>
-                                        <FontAwesomeIcon icon={faClock} />
+                                        Horaires&nbsp;
+                                        <FontAwesomeIcon
+                                            icon={faClockRegular}
+                                            size={"xs"}
+                                        />
                                     </h2>
                                 </div>
                                 <Table data={standUpPaddleOpening} />

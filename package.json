@@ -6,7 +6,8 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "serve": "serve ./out"
     },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^6.5.2",
@@ -30,6 +31,7 @@
         "eslint-config-next": "14.2.3",
         "prettier": "^3.2.5",
         "sass": "^1.77.2",
+        "serve": "^14.2.3",
         "typescript": "^5"
     }
 }

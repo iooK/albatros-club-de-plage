@@ -6,7 +6,8 @@ import backgroundImage from "@/components/Fitness/fitness-background.jpg";
 import Parallax from "@/components/Parallax/Parallax";
 import Table from "@/components/Table/Table";
 import { fitnessOpenDays, fitnessPrices, paddleFitnessPrices } from "@/components/Fitness/fitnessData";
-import { faArrowCircleDown, faClock } from "@fortawesome/free-solid-svg-icons";
+import { faArrowCircleDown } from "@fortawesome/free-solid-svg-icons";
+import { faClock as faClockRegular } from "@fortawesome/free-regular-svg-icons";
 
 export default function Fitness() {
     return (
@@ -70,8 +71,11 @@ export default function Fitness() {
                     >
                         <div className="page-header">
                             <h2>
-                                Horaires<span className="invisible">&nbsp;</span>
-                                <FontAwesomeIcon icon={faClock} />
+                                Horaires&nbsp;
+                                <FontAwesomeIcon
+                                    icon={faClockRegular}
+                                    size={"xs"}
+                                />
                             </h2>
                         </div>
                         <Table data={fitnessOpenDays} />

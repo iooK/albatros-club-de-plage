@@ -10,13 +10,8 @@ import {
     ModalFooter as BootstrapModalFooter,
     Row as BootstrapRow,
 } from "reactstrap";
-import {
-    faArrowCircleDown,
-    faClock,
-    faLongArrowLeft,
-    faLongArrowRight,
-    faPlus,
-} from "@fortawesome/free-solid-svg-icons";
+import { faArrowCircleDown, faLongArrowLeft, faLongArrowRight, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faClock as faClockRegular } from "@fortawesome/free-regular-svg-icons";
 
 import Parallax from "@/components/Parallax/Parallax";
 import Table from "@/components/Table/Table";
@@ -102,7 +97,10 @@ export default function BeachClub() {
                         <div className="page-header">
                             <h2>
                                 Horaires&nbsp;
-                                <FontAwesomeIcon icon={faClock} />
+                                <FontAwesomeIcon
+                                    icon={faClockRegular}
+                                    size={"xs"}
+                                />
                             </h2>
                         </div>
                         <Table data={beachClubOpenDays} />

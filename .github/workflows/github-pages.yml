@@ -33,15 +33,15 @@ jobs:
             -   name: Checkout
                 uses: actions/checkout@v4
 
-            -   name: Use Node.js 14
+            -   name: Use Node.js 20
                 uses: actions/setup-node@v4
                 with:
-                    node-version: '14.x'
+                    node-version: '20.x'
             -   name: Install packages
                 run: yarn install --frozen-lockfile
 
-            -   name: Test website
-                run: yarn test
+            -   name: Linters
+                run: yarn lint
 
             -   name: Build website
                 run: yarn build
@@ -52,7 +52,7 @@ jobs:
                 uses: actions/upload-pages-artifact@v3
                 with:
                     name: github-pages
-                    path: './build' # Upload only the build directory
+                    path: './out' # Upload only the build directory
 
             -   name: Deploy to GitHub Pages
                 id: deployment

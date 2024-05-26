@@ -2,7 +2,8 @@ import Image from "next/image";
 import React from "react";
 import { Col as BootstrapCol, Container as BootstrapContainer, Row as BootstrapRow } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowCircleDown, faClock, faExclamation } from "@fortawesome/free-solid-svg-icons";
+import { faArrowCircleDown, faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
+import { faClock as faClockRegular } from "@fortawesome/free-regular-svg-icons";
 
 import Parallax from "@/components/Parallax/Parallax";
 import Table from "@/components/Table/Table";
@@ -109,13 +110,15 @@ export default function SwimmingSchool() {
                     >
                         <div className="page-header">
                             <h2>
-                                Horaires
-                                <span className="invisible">&nbsp;</span>
-                                <FontAwesomeIcon icon={faClock} />
+                                Horaires&nbsp;
+                                <FontAwesomeIcon
+                                    icon={faClockRegular}
+                                    size={"xs"}
+                                />
                             </h2>
-                            <p className="small text-muted">
-                                <FontAwesomeIcon icon={faExclamation} />
-                                Réservation préalable recommandée
+                            <p className={"small text-muted"}>
+                                <FontAwesomeIcon icon={faCircleExclamation} />
+                                &nbsp;Réservation préalable recommandée
                             </p>
                         </div>
                         <Table data={swimmingSchoolOpenDays} />

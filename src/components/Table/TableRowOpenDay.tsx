@@ -41,9 +41,7 @@ function TableCelData({ openHours }: { openHours: Array<OpenHourInterface | fals
                 key={index}
                 value={
                     <>
-                        {openHour.from}
-                        <FontAwesomeIcon icon={faArrowRight} />
-                        {openHour.to}
+                        {openHour.from} <FontAwesomeIcon icon={faArrowRight} /> {openHour.to}
                     </>
                 }
             />
