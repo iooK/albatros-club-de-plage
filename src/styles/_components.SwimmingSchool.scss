@@ -1,0 +1,15 @@
+@import "bootstrap/scss/bootstrap.scss";
+
+@import "./_components.variables.scss";
+
+.SwimmingSchool {
+    .parallax {
+        span {
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    }
+}
