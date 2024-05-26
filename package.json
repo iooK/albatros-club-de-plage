@@ -5,7 +5,8 @@
     "scripts": {
         "build": "next build",
         "dev": "next dev",
-        "format": "prettier -w .",
+        "format": "prettier -c src",
+        "format:fix": "prettier -w src",
         "lint": "next lint",
         "serve": "serve ./out",
         "start": "next start"

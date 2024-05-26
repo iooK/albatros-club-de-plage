@@ -40,6 +40,9 @@ jobs:
             - name: Install packages
               run: yarn install --frozen-lockfile
 
+            - name: Check format
+              run: yarn format
+
             - name: Linters
               run: yarn lint
 

@@ -15,7 +15,10 @@ yarn serve
 
 ### Deployment
 
-**Push on master**
+```
+yarn format:fix
+git push
+```
 
 that runs GitHub Actions:
 
