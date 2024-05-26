@@ -13,7 +13,8 @@ env:
 on:
     # Runs on pushes targeting the default branch
     push:
-        branches: [$default-branch]
+        branches:
+            - master
     # Allows you to run this workflow manually from the Actions tab
     workflow_dispatch:
 
@@ -25,9 +26,9 @@ permissions:
 
 jobs:
     deploy:
-        environment:
-            name: github-pages
-            url: ${{ steps.deployment.outputs.page_url }}
+#        environment:
+#            name: github-pages
+#            url: ${{ steps.deployment.outputs.page_url }}
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
@@ -48,8 +49,11 @@ jobs:
 
             - name: Build website
               run: yarn build
-            #            -   name: Setup Github Pages
-            #                uses: actions/configure-pages@v5
+
+#            - name: Setup Github Pages
+#              uses: actions/configure-pages@v5
+#              with:
+#                  base_path: albatros-club-de-plage
 
             - name: Upload Pages artifact
               uses: actions/upload-pages-artifact@v3
