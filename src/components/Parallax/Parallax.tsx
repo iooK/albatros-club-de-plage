@@ -8,7 +8,6 @@ export default function Parallax({
     backgroundImage: StaticImageData;
     children: React.ReactNode;
 }) {
-    console.log(backgroundImage.src);
     return (
         <header
             className="parallax"
