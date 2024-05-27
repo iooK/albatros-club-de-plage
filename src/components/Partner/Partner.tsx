@@ -1,16 +1,5 @@
 import React from "react";
-
-import {
-    Card as BootstrapCard,
-    CardFooter as BootstrapCardFooter,
-    CardHeader as BootstrapCardHeader,
-    CardImg as BootstrapCardImg,
-    CardTitle as BootstrapCardTitle,
-    CardLink as BootstrapCardLink,
-    Col as BootstrapCol,
-    Container as BootstrapContainer,
-    Row as BootstrapRow,
-} from "reactstrap";
+import { Card, CardFooter, CardHeader, CardImg, CardTitle, CardLink, Col, Container, Row } from "reactstrap";
 
 import { partnerData } from "./partnerData";
 import { PartnerDataInterface } from "@/libs/definitions";
@@ -19,7 +8,7 @@ import backgroundImage from "@/components/Partner/partner-background.jpg";
 
 function PartnerCol({ partner }: { partner: PartnerDataInterface }) {
     return (
-        <BootstrapCol
+        <Col
             className="mb-3"
             lg="3"
             md="4"
@@ -27,33 +16,33 @@ function PartnerCol({ partner }: { partner: PartnerDataInterface }) {
             xl="3"
             xs="12"
         >
-            <BootstrapCard>
-                <BootstrapCardHeader className="text-center">
-                    <BootstrapCardTitle
+            <Card>
+                <CardHeader className="text-center">
+                    <CardTitle
                         itemProp="name"
                         tag="h2"
                     >
                         {partner.name}
-                    </BootstrapCardTitle>
-                </BootstrapCardHeader>
-                <BootstrapCardImg
+                    </CardTitle>
+                </CardHeader>
+                <CardImg
                     alt={partner.name}
                     className="img-fluid p-3"
-                    src={partner.image}
+                    src={process.env.BASE_PATH_IMG + partner.image}
                     width="100%"
                 />
-                <BootstrapCardFooter className="text-center">
-                    <BootstrapCardLink
+                <CardFooter className="text-center">
+                    <CardLink
                         href={partner.link}
                         itemProp="description"
                         target="_blank"
                         title={partner.name}
                     >
                         Voir le site
-                    </BootstrapCardLink>
-                </BootstrapCardFooter>
-            </BootstrapCard>
-        </BootstrapCol>
+                    </CardLink>
+                </CardFooter>
+            </Card>
+        </Col>
     );
 }
 
@@ -62,8 +51,8 @@ export function Partner() {
         <section className="Partner">
             <Parallax backgroundImage={backgroundImage}>&nbsp;</Parallax>
             <h1 id="Partner">Partenariat</h1>
-            <BootstrapContainer tag="article">
-                <BootstrapRow
+            <Container tag="article">
+                <Row
                     className="list-unstyled"
                     tag="ul"
                 >
@@ -75,8 +64,8 @@ export function Partner() {
                             />
                         );
                     })}
-                </BootstrapRow>
-            </BootstrapContainer>
+                </Row>
+            </Container>
         </section>
     );
 }

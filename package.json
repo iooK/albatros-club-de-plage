@@ -1,10 +1,10 @@
 {
     "name": "albatros-club-de-plage",
-    "version": "0.1.0",
+    "version": "3.0.0",
     "private": true,
     "scripts": {
-        "build": "next build",
-        "dev": "next dev",
+        "build": "BASE_PATH_IMG=${BASE_PATH_IMG:-\/} next build",
+        "dev": "BASE_PATH_IMG=${BASE_PATH_IMG:-\/} next dev",
         "format": "prettier -c src",
         "format:fix": "prettier -w src",
         "lint": "next lint",

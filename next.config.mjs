@@ -6,7 +6,9 @@ const __dirname = dirname(__filename);
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: "/albatros-club-de-plage",
+    ...(process.env.BASE_PATH_IMG !== "/" && {
+        basePath: process.env.BASE_PATH_IMG,
+    }),
     images: {
         unoptimized: true,
     },

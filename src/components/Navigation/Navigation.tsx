@@ -1,19 +1,6 @@
 import React, { Dispatch, SetStateAction } from "react";
 
-import {
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Collapse,
-    Nav,
-    NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownItem,
-    DropdownToggle,
-    DropdownMenu,
-    NavbarText,
-} from "reactstrap";
+import { Navbar, NavbarToggler, NavbarBrand, Collapse, Nav, NavItem, NavLink } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 
@@ -79,7 +66,20 @@ export default function Navigation() {
             fixed={"top"}
             light
         >
-            <NavbarBrand href="/">Albatros</NavbarBrand>
+            <NavbarBrand
+                href="/"
+                style={{
+                    color: "#180203",
+                    display: "inline-block",
+                    fontSize: "1.25rem",
+                    marginRight: "1rem",
+                    paddingBottom: ".25rem",
+                    paddingTop: ".25rem",
+                    whiteSpace: "nowrap",
+                }}
+            >
+                Albatros
+            </NavbarBrand>
             <NavbarToggler onClick={toggle} />
             <Collapse
                 isOpen={state.isOpen}

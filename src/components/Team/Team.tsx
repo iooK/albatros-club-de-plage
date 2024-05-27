@@ -22,7 +22,7 @@ function TeamCol({ teammate }: { teammate: TeamDataInterface }) {
             <Card>
                 <CardImg
                     alt={teammate.name}
-                    src={teammate.image}
+                    src={process.env.BASE_PATH_IMG + teammate.image}
                     top
                     width="100%"
                 />
