@@ -3,8 +3,8 @@
     "version": "3.0.0",
     "private": true,
     "scripts": {
-        "build": "BASE_PATH_IMG=${BASE_PATH_IMG:-\/} next build",
-        "dev": "BASE_PATH_IMG=${BASE_PATH_IMG:-\/} next dev",
+        "build": "BASE_PATH_IMG=${BASE_PATH_IMG:-\"\"} next build",
+        "dev": "BASE_PATH_IMG=${BASE_PATH_IMG:-\"\"} next dev",
         "format": "prettier -c src",
         "format:fix": "prettier -w src",
         "lint": "next lint",

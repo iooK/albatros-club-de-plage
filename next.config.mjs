@@ -6,7 +6,7 @@ const __dirname = dirname(__filename);
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    ...(process.env.BASE_PATH_IMG !== "/" && {
+    ...(process.env.BASE_PATH_IMG && {
         basePath: process.env.BASE_PATH_IMG,
     }),
     images: {
