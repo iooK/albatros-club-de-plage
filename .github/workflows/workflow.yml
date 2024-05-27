@@ -1,4 +1,4 @@
-name: test_workflow
+name: tests_and_deploy
 
 env:
     CI: 1

@@ -2,8 +2,6 @@
 // Variables
 // --------------------------------------------------
 
-//#f7f7f7
-
 // Albatros definitions
 $black: #180203;
 $blue: #08c;
@@ -17,7 +15,6 @@ $white: #fff;
 $page-header-margin: 10px;
 $page-header-border-color: $light-blue;
 
-
 // Bootstrap
 $light: #f7f7f7; // override with old faded color of Bootstrap 3
 
@@ -26,7 +23,15 @@ $hr-border-color: $light-blue; // ok
 $link-hover-color: $deep-blue; // ok
 
 $font-size-base: 0.875rem; // ok
-$font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif; // new
+$font-family-sans-serif:
+    -apple-system,
+    system-ui,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Helvetica Neue,
+    Arial,
+    sans-serif; // new
 
 $headings-font-weight: 700; // ok
 $h1-font-size: 2.25rem; // new
