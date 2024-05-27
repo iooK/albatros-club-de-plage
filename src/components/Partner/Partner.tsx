@@ -14,6 +14,8 @@ import {
 
 import { partnerData } from "./partnerData";
 import { PartnerDataInterface } from "@/libs/definitions";
+import Parallax from "@/components/Parallax/Parallax";
+import backgroundImage from "@/components/Partner/partner-background.jpg";
 
 function PartnerCol({ partner }: { partner: PartnerDataInterface }) {
     return (
@@ -57,7 +59,8 @@ function PartnerCol({ partner }: { partner: PartnerDataInterface }) {
 
 export function Partner() {
     return (
-        <section className="Partner bg-faded">
+        <section className="Partner">
+            <Parallax backgroundImage={backgroundImage}>&nbsp;</Parallax>
             <h1 id="Partner">Partenariat</h1>
             <BootstrapContainer tag="article">
                 <BootstrapRow

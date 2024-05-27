@@ -64,7 +64,7 @@ export default function StandUpPaddle() {
                                 xl="6"
                             >
                                 <div className="page-header">
-                                    <h2>Tarifs location</h2>
+                                    <h2 className={"underline"}>Tarifs location</h2>
                                     <p className="small text-muted">
                                         Gilet de sauvetage inclus&nbsp;
                                         <FontAwesomeIcon icon={faHeart} />
@@ -82,7 +82,8 @@ export default function StandUpPaddle() {
                             >
                                 <div className="page-header pb">
                                     <h2>
-                                        Horaires&nbsp;
+                                        <span className={"underline"}>Horaires</span>
+                                        &nbsp;
                                         <FontAwesomeIcon
                                             icon={faClockRegular}
                                             size={"xs"}

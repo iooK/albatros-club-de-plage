@@ -1,3 +1,8 @@
+@import "./variables";
+@import "./helpers";
+
+@import "bootstrap/scss/bootstrap.scss";
+
 @import "./_components.BeachClub.scss";
 @import "./_components.Fitness.scss";
 @import "./_components.Navigation.scss";
@@ -5,26 +10,21 @@
 @import "./_components.StandUpPaddle";
 @import "./_components.SwimmingSchool.scss";
 @import "./_components.Team.scss";
-@import "./_components.variables.scss";
 
 section {
     footer {
-        font-size: $font-size-h1;
+        font-size: $h1-font-size;
         margin: 0 20px 20px;
         padding: 20px;
         text-align: center;
     }
 
     h1 {
-        border-bottom: 1px solid $brand-primary;
-        color: $brand-primary;
+        border-bottom: 1px solid $primary;
+        color: $primary;
         margin: 0 20px 20px;
         padding: 20px;
         text-align: center;
-    }
-
-    h2 {
-        text-decoration: underline;
     }
 }
 
@@ -63,8 +63,8 @@ span.fa-arrow-right {
     span {
         color: $white;
         display: block;
-        font-size: $font-size-h1;
-        line-height: $font-size-h1;
+        font-size: $h1-font-size;
+        line-height: $h1-font-size;
         padding: 20px;
         text-shadow:
             0 2px 0 $real-black,
@@ -76,7 +76,34 @@ span.fa-arrow-right {
 }
 
 .table.text-center {
-    thead th {
-        text-align: center;
+    tbody, thead {
+        td, th {
+            text-align: center;
+        }
     }
+    tbody {
+        th {
+            text-align: left;
+        }
+    }
+}
+
+// Since Boostrap 4 beta, some elements have changed.
+.btn-secondary {
+    color: $blue;
+    background-color: $white;
+    border-color: $light-blue;
+}
+.btn-secondary:focus,
+.btn-secondary:hover,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.show > .btn-secondary.dropdown-toggle {
+    color: $blue;
+    background-color: #e6e6e6;
+    border-color: #a0d3ed;
+}
+.btn-secondary:focus,
+.btn-secondary.focus {
+    box-shadow: 0 0 0 0.1rem rgba(0, 85, 128, 0.25)
 }

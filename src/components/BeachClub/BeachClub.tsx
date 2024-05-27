@@ -73,13 +73,13 @@ export default function BeachClub() {
                                 Le Mini Club Albatros et l&apos;Albatros Sportif accueillent les enfants de 3 à 14 ans
                                 pour des animations ludiques et encadrées.
                             </p>
-                            <h2>Mini Club Albatros</h2>
+                            <h2 className={"underline"}>Mini Club Albatros</h2>
                             <p>
                                 Pour les plus petits de 3 à 6 ans, le Mini Club Albatros ouvre l&apos;esprit des petits
                                 et les éveille grâce à des activités ludiques. Encadrée par une équipe qualifiée et
                                 compétente.
                             </p>
-                            <h2>Albatros Sportif</h2>
+                            <h2 className={"underline"}>Albatros Sportif</h2>
                             <p>
                                 Pour les plus grands de 7 à 14 ans, le caractère sportif est ici plus poussé. Pour un
                                 épanouissement total et la découverte de sports pendant les vacances.
@@ -96,7 +96,7 @@ export default function BeachClub() {
                     >
                         <div className="page-header">
                             <h2>
-                                Horaires&nbsp;
+                                <span className={"underline"}>Horaires</span>&nbsp;
                                 <FontAwesomeIcon
                                     icon={faClockRegular}
                                     size={"xs"}
@@ -119,7 +119,7 @@ export default function BeachClub() {
                         xs="12"
                     >
                         <div className="page-header">
-                            <h2>Tarifs demi-journée</h2>
+                            <h2 className={"underline"}>Tarifs demi-journée</h2>
                             <p className="small text-muted">Mode de paiement: Chèque - Espèce</p>
                         </div>
                         <Table data={getShortPrices(beachClubHalfDayPrices)} />
@@ -141,14 +141,16 @@ export default function BeachClub() {
                             </BootstrapModalHeader>
                             <BootstrapModalBody>
                                 <FontAwesomeIcon
-                                    className="float-left hidden-sm-up"
+                                    className="float-left d-block d-sm-none"
                                     icon={faLongArrowLeft}
                                 />
                                 <FontAwesomeIcon
-                                    className="float-right hidden-sm-up"
+                                    className="float-right d-block d-sm-none"
                                     icon={faLongArrowRight}
                                 />
-                                <Table data={beachClubHalfDayPrices} />
+                                <div className={"table-responsive"}>
+                                    <Table data={beachClubHalfDayPrices} />
+                                </div>
                             </BootstrapModalBody>
                             <BootstrapModalFooter>
                                 <BootstrapButton
@@ -171,7 +173,7 @@ export default function BeachClub() {
                         xs="12"
                     >
                         <div className="page-header">
-                            <h2>Tarifs journée complète</h2>
+                            <h2 className={"underline"}>Tarifs journée complète</h2>
                             <p className="small text-muted">Mode de paiement: Chèque - Espèce</p>
                         </div>
                         <Table data={getShortPrices(beachClubFullDayPrices)} />
@@ -193,14 +195,16 @@ export default function BeachClub() {
                             </BootstrapModalHeader>
                             <BootstrapModalBody>
                                 <FontAwesomeIcon
-                                    className="float-left hidden-sm-up"
+                                    className="float-left d-block d-sm-none"
                                     icon={faLongArrowLeft}
                                 />
                                 <FontAwesomeIcon
-                                    className="float-right hidden-sm-up"
+                                    className="float-right d-block d-sm-none"
                                     icon={faLongArrowRight}
                                 />
-                                <Table data={beachClubFullDayPrices} />
+                                <div className={"table-responsive"}>
+                                    <Table data={beachClubFullDayPrices} />
+                                </div>
                             </BootstrapModalBody>
                             <BootstrapModalFooter>
                                 <BootstrapButton

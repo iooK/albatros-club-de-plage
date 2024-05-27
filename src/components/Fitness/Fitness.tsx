@@ -42,7 +42,7 @@ export default function Fitness() {
                                 xs="12"
                             >
                                 <div className="page-header">
-                                    <h2>Tarifs séance</h2>
+                                    <h2 className={"underline"}>Tarifs séance</h2>
                                 </div>
                                 <Table data={fitnessPrices} />
                             </BootstrapCol>
@@ -55,7 +55,7 @@ export default function Fitness() {
                                 xs="12"
                             >
                                 <div className="page-header">
-                                    <h2>Tarifs séance Fitness Paddle</h2>
+                                    <h2 className={"underline"}>Tarifs séance Fitness Paddle</h2>
                                 </div>
                                 <Table data={paddleFitnessPrices} />
                             </BootstrapCol>
@@ -71,7 +71,8 @@ export default function Fitness() {
                     >
                         <div className="page-header">
                             <h2>
-                                Horaires&nbsp;
+                                <span className={"underline"}>Horaires</span>
+                                &nbsp;
                                 <FontAwesomeIcon
                                     icon={faClockRegular}
                                     size={"xs"}

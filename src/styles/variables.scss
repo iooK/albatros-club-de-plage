@@ -1,0 +1,45 @@
+//
+// Variables
+// --------------------------------------------------
+
+//#f7f7f7
+
+// Albatros definitions
+$black: #180203;
+$blue: #08c;
+$deep-blue: #005580;
+$facebook: #3b5998;
+$light-blue: #d4ebf7;
+$light-gray: #f5f5f5;
+$real-black: #000;
+$white: #fff;
+
+$page-header-margin: 10px;
+$page-header-border-color: $light-blue;
+
+
+// Bootstrap
+$light: #f7f7f7; // override with old faded color of Bootstrap 3
+
+$body-color: $black; // ok
+$hr-border-color: $light-blue; // ok
+$link-hover-color: $deep-blue; // ok
+
+$font-size-base: 0.875rem; // ok
+$font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif; // new
+
+$headings-font-weight: 700; // ok
+$h1-font-size: 2.25rem; // new
+$h2-font-size: 1.5rem; // new
+$h3-font-size: 1.25rem; // new
+
+$modal-backdrop-bg: $real-black; // ok
+
+$navbar-light-color: $blue; // ok
+$navbar-light-hover-color: $blue; // ok
+$navbar-light-active-color: $white; // ok
+
+$table-accent-bg: $light-blue; // ok
+$table-hover-b: $light-blue; // ok
+$table-border-width: 0; // ok
+$table-head-bg: $blue; // ok

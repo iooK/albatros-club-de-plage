@@ -1,11 +1,6 @@
 import React from "react";
 
-import {
-    Button as BootstrapButton,
-    Col as BootstrapCol,
-    Container as BootstrapContainer,
-    Row as BootstrapRow,
-} from "reactstrap";
+import { Col, Container, Row } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowCircleDown, faEnvelopeSquare, faPhoneSquare } from "@fortawesome/free-solid-svg-icons";
 import { GoogleMapsEmbed } from "@next/third-parties/google";
@@ -20,35 +15,31 @@ export default function Contact() {
         lng: -3.12005,
     };
 
-    // function calcRoute(selectedMode: google.maps.TravelMode) {
-    //     navigator.geolocation.getCurrentPosition(
-    //         async (position) => {
-    //             let request = {
-    //                 destination: new google.maps.LatLng(markerPosition.lat, markerPosition.lng),
-    //                 origin: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
-    //                 travelMode: selectedMode,
-    //             };
-    //
-    //             let result = await directionsService.route(request);
-    //             setMap({ ...map, directions: result });
-    //         },
-    //         (error) => {
-    //             throw new Error(
-    //                 `Can't find your location.\nError code: ${error.code}\nError message: ${error.message}`,
-    //             );
-    //         },
-    //         {
-    //             enableHighAccuracy: true,
-    //         },
-    //     );
-    // }
+    const links = [
+        {
+            label: "À pied",
+            travelmode: "walking",
+        },
+        {
+            label: "À vélo",
+            travelmode: "bicycling",
+        },
+        {
+            label: "En voiture",
+            travelmode: "driving",
+        },
+        {
+            label: "En transport",
+            travelmode: "transit",
+        },
+    ];
 
     return (
         <section className="Contact">
             <h1 id="Contact">Contact</h1>
-            <BootstrapContainer>
-                <BootstrapRow tag="article">
-                    <BootstrapCol
+            <Container>
+                <Row tag="article">
+                    <Col
                         lg="6"
                         md="6"
                         sm="12"
@@ -62,7 +53,12 @@ export default function Contact() {
                             <h2>
                                 <FontAwesomeIcon icon={faEnvelopeSquare} />
                                 &nbsp;
-                                <strong itemProp="name">Albatros Club de Plage</strong>
+                                <strong
+                                    className={"underline text-center"}
+                                    itemProp="name"
+                                >
+                                    Albatros Club de Plage
+                                </strong>
                             </h2>
                             <span
                                 itemProp="address"
@@ -121,66 +117,43 @@ export default function Contact() {
                         {/*    allowFullScreen={true}*/}
                         {/*    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"*/}
                         {/*></iframe>*/}
-                    </BootstrapCol>
-                    <BootstrapCol
+                    </Col>
+                    <Col
                         lg="6"
                         md="6"
                         sm="12"
                         xl="6"
                         xs="12"
                     >
-                        <GoogleMapsEmbed
-                            apiKey="AIzaSyAOo7qLSnef87VtxFV-Hm6kPVn5fLM1qaM"
+                        <iframe
+                            allowFullScreen={false}
+                            loading="lazy"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.5339029936126!2d-3.1227349229887906!3d47.47951159674392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x481074020ed0d4a9%3A0xafb3c110c2b26e8f!2sClub%20de%20Plage%20l&#39;Albatros!5e0!3m2!1sfr!2sfr!4v1716839521234!5m2!1sfr!2sfr"
                             height={400}
                             width="100%"
-                            mode="place"
-                            q="Brooklyn+Bridge,New+York,NY"
-                        />
-                        {/*<ApiProvider apiKey={"AIzaSyAOo7qLSnef87VtxFV-Hm6kPVn5fLM1qaM"}>*/}
-                        {/*    <Map*/}
-                        {/*        defaultCenter={mapProperties.center}*/}
-                        {/*        defaultZoom={mapProperties.zoom}*/}
-                        {/*        style={{ height: "400px" }}*/}
-                        {/*    >*/}
-                        {/*        <Marker position={markerPosition} />*/}
-                        {/*    </Map>*/}
-                        {/*</ApiProvider>*/}
-                        {/*<div className="text-center mt-2">*/}
-                        {/*    <h2>Nous rejoindre</h2>*/}
-                        {/*    <p>*/}
-                        {/*        <BootstrapButton*/}
-                        {/*            className="mx-1"*/}
-                        {/*            color="primary"*/}
-                        {/*            onClick={(e) => calcRoute(google.maps.TravelMode.WALKING)}*/}
-                        {/*        >*/}
-                        {/*            À pied*/}
-                        {/*        </BootstrapButton>*/}
-                        {/*        <BootstrapButton*/}
-                        {/*            className="mx-1"*/}
-                        {/*            color="primary"*/}
-                        {/*            onClick={(e) => calcRoute(google.maps.TravelMode.BICYCLING)}*/}
-                        {/*        >*/}
-                        {/*            À vélo*/}
-                        {/*        </BootstrapButton>*/}
-                        {/*        <BootstrapButton*/}
-                        {/*            className="mx-1"*/}
-                        {/*            color="primary"*/}
-                        {/*            onClick={(e) => calcRoute(google.maps.TravelMode.DRIVING)}*/}
-                        {/*        >*/}
-                        {/*            En voiture*/}
-                        {/*        </BootstrapButton>*/}
-                        {/*        <BootstrapButton*/}
-                        {/*            className="mx-1"*/}
-                        {/*            color="primary"*/}
-                        {/*            onClick={(e) => calcRoute(google.maps.TravelMode.TRANSIT)}*/}
-                        {/*        >*/}
-                        {/*            En transport*/}
-                        {/*        </BootstrapButton>*/}
-                        {/*    </p>*/}
-                        {/*</div>*/}
-                    </BootstrapCol>
-                </BootstrapRow>
-            </BootstrapContainer>
+                            referrerPolicy="no-referrer-when-downgrade"
+                            style={{ border: 0, overflow: "hidden" }}
+                        ></iframe>
+                        <div className="text-center mt-2">
+                            <h2>Nous rejoindre</h2>
+                            <p>
+                                {links.map((link, index) => {
+                                    return (
+                                        <a
+                                            className={"btn btn-primary mx-1"}
+                                            href={`https://www.google.com/maps/dir/?api=1&destination=${markerPosition.lat},${markerPosition.lng}&travelmode=${link.travelmode}`}
+                                            key={index}
+                                            target={"_blank"}
+                                        >
+                                            {link.label}
+                                        </a>
+                                    );
+                                })}
+                            </p>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
             <footer>
                 <a
                     href="#Partner"

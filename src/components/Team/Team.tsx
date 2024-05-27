@@ -1,13 +1,5 @@
 import React from "react";
-import {
-    Card as BootstrapCard,
-    CardImg as BootstrapCardImg,
-    CardTitle as BootstrapCardTitle,
-    CardText as BootstrapCardText,
-    Col as BootstrapCol,
-    Container as BootstrapContainer,
-    Row as BootstrapRow,
-} from "reactstrap";
+import { Card, CardImg, CardTitle, CardText, Col, Container, Row } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowCircleDown } from "@fortawesome/free-solid-svg-icons";
 
@@ -16,7 +8,7 @@ import { teamData } from "@/components/Team/teamData";
 
 function TeamCol({ teammate }: { teammate: TeamDataInterface }) {
     return (
-        <BootstrapCol
+        <Col
             className="mb-3"
             itemProp="member"
             itemScope
@@ -27,33 +19,33 @@ function TeamCol({ teammate }: { teammate: TeamDataInterface }) {
             xl="3"
             xs="12"
         >
-            <BootstrapCard>
-                <BootstrapCardImg
+            <Card>
+                <CardImg
                     alt={teammate.name}
                     src={teammate.image}
                     top
                     width="100%"
                 />
-                <div className="card-block">
-                    <BootstrapCardTitle
+                <div style={{ padding: "1.25rem" }}>
+                    <CardTitle
                         itemProp="name"
                         tag="h2"
                     >
-                        {teammate.name}
-                    </BootstrapCardTitle>
-                    <BootstrapCardText itemProp="description">{teammate.description}</BootstrapCardText>
+                        <span className={"underline"}>{teammate.name}</span>
+                    </CardTitle>
+                    <CardText itemProp="description">{teammate.description}</CardText>
                 </div>
-            </BootstrapCard>
-        </BootstrapCol>
+            </Card>
+        </Col>
     );
 }
 
 export function Team() {
     return (
-        <section className="Team bg-faded">
+        <section className="Team bg-light">
             <h1 id="Team">Équipe</h1>
-            <BootstrapContainer>
-                <BootstrapRow
+            <Container>
+                <Row
                     itemScope
                     itemType="http://schema.org/Organization"
                     tag="article"
@@ -66,8 +58,8 @@ export function Team() {
                             />
                         );
                     })}
-                </BootstrapRow>
-            </BootstrapContainer>
+                </Row>
+            </Container>
             <footer>
                 <a
                     href="#Contact"

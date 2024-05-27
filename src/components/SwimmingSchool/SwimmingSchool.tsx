@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { Col as BootstrapCol, Container as BootstrapContainer, Row as BootstrapRow } from "reactstrap";
+import { Col, Container, Row } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowCircleDown, faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 import { faClock as faClockRegular } from "@fortawesome/free-regular-svg-icons";
@@ -18,9 +18,9 @@ export default function SwimmingSchool() {
                 Profitez de l&apos;été pour apprendre à nager avec l&apos;École de Natation
             </Parallax>
             <h1 id="SwimmingSchool">École de Natation</h1>
-            <BootstrapContainer>
-                <BootstrapRow>
-                    <BootstrapCol
+            <Container>
+                <Row>
+                    <Col
                         lg="7"
                         md="7"
                         sm="12"
@@ -44,7 +44,7 @@ export default function SwimmingSchool() {
                                 L&apos;École de Natation s&apos;appuie sur 3 niveaux d&apos;enseignement:
                                 l&apos;initiation, l&apos;apprentissage et le perfectionnement.
                             </p>
-                            <h2>Initiation</h2>
+                            <h2 className={"underline"}>Initiation</h2>
                             <p>
                                 Cette première étape de l&apos;apprentissage consiste en une familiarisation de
                                 l&apos;enfant avec l&apos;eau. Nous abordons les premières bases en fonction du vécu
@@ -52,7 +52,7 @@ export default function SwimmingSchool() {
                                 immersions. La priorité est de donner confiance à l&apos;enfant afin qu&apos;il
                                 développe son aisance aquatique.
                             </p>
-                            <h2>Apprentissage</h2>
+                            <h2 className={"underline"}>Apprentissage</h2>
                             <p>
                                 Quand l&apos;enfant a acquis la confiance nécessaire, nous transmettons les premiers
                                 élèments techniques de nage. Dos crawlé, brasse et crawl sont privilégiés. Avec du
@@ -68,8 +68,8 @@ export default function SwimmingSchool() {
                                 exemple).
                             </p>
                         </div>
-                    </BootstrapCol>
-                    <BootstrapCol
+                    </Col>
+                    <Col
                         lg="5"
                         md="5"
                         sm="12"
@@ -84,10 +84,10 @@ export default function SwimmingSchool() {
                                 src={swimmingPool}
                             />
                         </p>
-                    </BootstrapCol>
-                </BootstrapRow>
-                <BootstrapRow>
-                    <BootstrapCol
+                    </Col>
+                </Row>
+                <Row>
+                    <Col
                         lg="7"
                         md="7"
                         sm="12"
@@ -96,11 +96,11 @@ export default function SwimmingSchool() {
                         xs="12"
                     >
                         <div className="page-header pb">
-                            <h2>Tarifs séance</h2>
+                            <h2 className={"underline"}>Tarifs séance</h2>
                         </div>
                         <Table data={swimmingSchoolPrices} />
-                    </BootstrapCol>
-                    <BootstrapCol
+                    </Col>
+                    <Col
                         lg="5"
                         md="5"
                         sm="12"
@@ -110,7 +110,8 @@ export default function SwimmingSchool() {
                     >
                         <div className="page-header">
                             <h2>
-                                Horaires&nbsp;
+                                <span className={"underline"}>Horaires</span>
+                                &nbsp;
                                 <FontAwesomeIcon
                                     icon={faClockRegular}
                                     size={"xs"}
@@ -122,9 +123,9 @@ export default function SwimmingSchool() {
                             </p>
                         </div>
                         <Table data={swimmingSchoolOpenDays} />
-                    </BootstrapCol>
-                </BootstrapRow>
-            </BootstrapContainer>
+                    </Col>
+                </Row>
+            </Container>
             <footer>
                 <a
                     href="#Fitness"

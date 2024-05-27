@@ -1,6 +1,6 @@
 @import "bootstrap/scss/bootstrap.scss";
 
-@import "./_components.variables.scss";
+@import "./variables";
 
 // Overwrite some classes of navbar of Bootstrap 4.
 .navbar-light .navbar-brand {
