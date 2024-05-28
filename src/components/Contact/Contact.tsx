@@ -3,14 +3,9 @@ import React from "react";
 import { Col, Container, Row } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowCircleDown, faEnvelopeSquare, faPhoneSquare } from "@fortawesome/free-solid-svg-icons";
-import { GoogleMapsEmbed } from "@next/third-parties/google";
 
 export default function Contact() {
-    const mapProperties: { center: google.maps.LatLngLiteral; zoom: number } = {
-        center: { lat: 47.4766945, lng: -3.12065358 },
-        zoom: 15,
-    };
-    const markerPosition: google.maps.LatLngLiteral = {
+    const mapPosition: google.maps.LatLngLiteral = {
         lat: 47.47954,
         lng: -3.12005,
     };
@@ -78,12 +73,24 @@ export default function Contact() {
                             <hr />
                             <span className="h3">
                                 <FontAwesomeIcon icon={faPhoneSquare} />
-                                &nbsp;Juillet : <span itemProp="telephone">(+33)6&nbsp;61&nbsp;34&nbsp;18&nbsp;64</span>
+                                &nbsp;Juillet :{" "}
+                                <a
+                                    href="tel:+33661341864"
+                                    itemProp="telephone"
+                                >
+                                    (+33)6&nbsp;61&nbsp;34&nbsp;18&nbsp;64
+                                </a>
                             </span>
                             <br />
                             <span className="h3">
                                 <FontAwesomeIcon icon={faPhoneSquare} />
-                                &nbsp;Août : <span itemProp="telephone">(+33)6&nbsp;31&nbsp;23&nbsp;39&nbsp;13</span>
+                                &nbsp;Août :{" "}
+                                <a
+                                    href="tel:+33631233913"
+                                    itemProp="telephone"
+                                >
+                                    (+33)6&nbsp;31&nbsp;23&nbsp;39&nbsp;13
+                                </a>
                             </span>
                         </address>
                         <hr />
@@ -141,7 +148,7 @@ export default function Contact() {
                                     return (
                                         <a
                                             className={"btn btn-primary mx-1"}
-                                            href={`https://www.google.com/maps/dir/?api=1&destination=${markerPosition.lat},${markerPosition.lng}&travelmode=${link.travelmode}`}
+                                            href={`https://www.google.com/maps/dir/?api=1&destination=${mapPosition.lat},${mapPosition.lng}&travelmode=${link.travelmode}`}
                                             key={index}
                                             target={"_blank"}
                                         >
