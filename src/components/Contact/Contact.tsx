@@ -44,7 +44,7 @@ export default function Contact() {
                     >
                         <address
                             itemScope
-                            itemType="http://schema.org/Organization"
+                            itemType="https://schema.org/Organization"
                         >
                             <h2>
                                 <FontAwesomeIcon icon={faEnvelopeSquare} />
@@ -59,7 +59,7 @@ export default function Contact() {
                             <span
                                 itemProp="address"
                                 itemScope
-                                itemType="http://schema.org/PostalAddress"
+                                itemType="https://schema.org/PostalAddress"
                             >
                                 <span itemProp="streetAddress">
                                     Grande Plage de Quiberon

@@ -12,7 +12,7 @@ function TeamCol({ teammate }: { teammate: TeamDataInterface }) {
             className="mb-3"
             itemProp="member"
             itemScope
-            itemType="http://schema.org/Person"
+            itemType="https://schema.org/Person"
             lg="3"
             md="4"
             sm="6"
@@ -48,7 +48,7 @@ export function Team() {
             <Container>
                 <Row
                     itemScope
-                    itemType="http://schema.org/Organization"
+                    itemType="https://schema.org/Organization"
                     tag="article"
                 >
                     {teamData.map((teammate, index) => {
