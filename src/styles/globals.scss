@@ -11,6 +11,14 @@
 @import "./_components.SwimmingSchool.scss";
 @import "./_components.Team.scss";
 
+// move anchors result
+:target::before {
+    content: "";
+    display: block;
+    height: calc(38px + 8px + 8px); /* fixed header height*/
+    margin: calc(-38px - 8px - 8px) 0 0; /* negative fixed header height */
+}
+
 section {
     footer {
         font-size: $h1-font-size;

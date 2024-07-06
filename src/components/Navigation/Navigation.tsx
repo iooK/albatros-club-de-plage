@@ -27,7 +27,7 @@ function ItemMenu({
             return;
         }
 
-        setState({ ...state, activeLink: link });
+        setState({ ...state, activeLink: link, isOpen: false });
     }
 
     return (

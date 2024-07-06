@@ -24,15 +24,19 @@ export default function Fitness() {
                         xs="12"
                     >
                         <BootstrapRow>
-                            <p>
-                                Dans le cadre magnifique de la Grande Plage de Quiberon, venez tous les matins pratiquer
-                                une séance de remise en forme (réveil musculaire, travail cardio-vasculaire). Dans un
-                                climat de convivialité, vous pratiquerez toute une palette d&apos;activités pour
-                                améliorer votre condition physique, dans un souci de bien-être. La marche, le footing,
-                                le stretching, les renforcements musculaires, des activités sportives aquatiques
-                                (aquagym et aquaforme en mer), ... Notre éducateur s&apos;adapte au niveau de chacun
-                                pour que tout le monde éprouve du plaisir.
-                            </p>
+                            <BootstrapCol>
+                                <p>
+                                    Dans le cadre magnifique de la Grande Plage de Quiberon, venez tous les matins
+                                    pratiquer une séance de remise en forme (réveil musculaire, travail
+                                    cardio-vasculaire). Dans un climat de convivialité, vous pratiquerez toute une
+                                    palette d&apos;activités pour améliorer votre condition physique, dans un souci de
+                                    bien-être. La marche, le footing, le stretching, les renforcements musculaires, des
+                                    activités sportives aquatiques (aquagym et aquaforme en mer), ... Notre éducateur
+                                    s&apos;adapte au niveau de chacun pour que tout le monde éprouve du plaisir.
+                                </p>
+                            </BootstrapCol>
+                        </BootstrapRow>
+                        <BootstrapRow>
                             <BootstrapCol
                                 lg="6"
                                 md="6"
