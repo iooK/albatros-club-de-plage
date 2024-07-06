@@ -23,7 +23,7 @@ export const beachClubFullDayPrices: PricesInterface = {
         },
         {
             label: "5 enfants",
-            prices: ["75 €", "360 €", "600 €", "810 €", "690 €"],
+            prices: ["75 €", "360 €", "600 €", "810 €", "960 €"],
         },
     ],
 } as const;
