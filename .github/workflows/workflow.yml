@@ -1,7 +1,7 @@
 name: tests_and_deploy
 
 env:
-    BASE_PATH_IMG: "/albatros-club-de-plage"
+    BASE_PATH_IMG: ""
     CI: 1
     IS_CI: 1
 
