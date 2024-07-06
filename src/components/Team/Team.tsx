@@ -43,7 +43,8 @@ function TeamCol({ teammate }: { teammate: TeamDataInterface }) {
 export function Team() {
     return (
         <section className="Team bg-light">
-            <h1 id="Team">Équipe</h1>
+            <span id="Team" />
+            <h1>Équipe</h1>
             <Container>
                 <Row
                     itemScope

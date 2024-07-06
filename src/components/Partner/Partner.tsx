@@ -50,7 +50,8 @@ export function Partner() {
     return (
         <section className="Partner">
             <Parallax backgroundImage={backgroundImage}>&nbsp;</Parallax>
-            <h1 id="Partner">Partenariat</h1>
+            <span id="Partner" />
+            <h1>Partenariat</h1>
             <Container tag="article">
                 <Row
                     className="list-unstyled"

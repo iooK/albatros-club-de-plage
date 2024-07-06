@@ -31,7 +31,8 @@ export default function Contact() {
 
     return (
         <section className="Contact">
-            <h1 id="Contact">Contact</h1>
+            <span id="Contact" />
+            <h1>Contact</h1>
             <Container>
                 <Row tag="article">
                     <Col

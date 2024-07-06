@@ -17,7 +17,8 @@ export default function SwimmingSchool() {
             <Parallax backgroundImage={backgroundImage}>
                 Profitez de l&apos;été pour apprendre à nager avec l&apos;École de Natation
             </Parallax>
-            <h1 id="SwimmingSchool">École de Natation</h1>
+            <span id="SwimmingSchool" />
+            <h1>École de Natation</h1>
             <Container>
                 <Row>
                     <Col

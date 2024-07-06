@@ -57,7 +57,8 @@ export default function BeachClub() {
             <Parallax backgroundImage={backgroundImage}>
                 l&apos;Albatros accueille vos enfants pour leur faire passer des vacances inoubliables
             </Parallax>
-            <h1 id="BeachClub">Club de Plage</h1>
+            <span id="BeachClub" />
+            <h1>Club de Plage</h1>
             <BoostrapContainer>
                 <BootstrapRow>
                     <BootstrapCol

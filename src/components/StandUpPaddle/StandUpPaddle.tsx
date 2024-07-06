@@ -13,7 +13,8 @@ export default function StandUpPaddle() {
     return (
         <section className="StandUpPaddle">
             <Parallax backgroundImage={backgroundImage}>Et si on marchait sur l&apos;eau...</Parallax>
-            <h1 id="StandUpPaddle">Stand Up Paddle</h1>
+            <span id="StandUpPaddle" />
+            <h1>Stand Up Paddle</h1>
             <BootstrapContainer>
                 <BootstrapRow>
                     <BootstrapCol

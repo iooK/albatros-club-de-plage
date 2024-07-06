@@ -13,7 +13,8 @@ export default function Fitness() {
     return (
         <section className="Fitness">
             <Parallax backgroundImage={backgroundImage}>Des vacances au top de la forme</Parallax>
-            <h1 id="Fitness">Remise en forme</h1>
+            <span id="Fitness" />
+            <h1>Remise en forme</h1>
             <BootstrapContainer>
                 <BootstrapRow>
                     <BootstrapCol
