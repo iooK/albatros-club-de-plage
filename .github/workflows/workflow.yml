@@ -59,14 +59,12 @@ jobs:
             - if: github.ref == 'refs/heads/master'
               name: Setup Github Pages
               uses: actions/configure-pages@v5
-              with:
-                  base_path: "/albatros-club-de-plage"
             - if: github.ref == 'refs/heads/master'
               name: Upload Pages artifact
               uses: actions/upload-pages-artifact@v3
               with:
                   name: github-pages
-                  path: "./out" # Upload only the build directory
+                  path: "./out" # upload only the build directory
             - if: github.ref == 'refs/heads/master'
               name: Deploy to GitHub Pages
               id: deployment
