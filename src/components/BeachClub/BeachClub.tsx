@@ -54,7 +54,10 @@ export default function BeachClub() {
 
     return (
         <section className="BeachClub">
-            <Parallax backgroundImage={backgroundImage}>
+            <Parallax
+                backgroundImage={backgroundImage}
+                backgroundPosition={"75% 50%"}
+            >
                 l&apos;Albatros accueille vos enfants pour leur faire passer des vacances inoubliables
             </Parallax>
             <span id="BeachClub" />
